@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+}
+
+.header {
+    width: 100vw;
+    height: 95vh;
+    outline: 1px solid black;
+    position: relative;
+
+    
+    &__header {
+        width: calc(100% - 6vw);
+        height: 10vh;
+        background-color: blue;
+        color: yellow;
+        padding-left: 3vw;
+        padding-right: 3vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        
+        .header__header_menu {
+            outline: 2px solid gold;
+            justify-self: end
+        }
+    }
+
+
+    &__nav{
+            width: calc(100%);
+            height: calc(95vh - 10vh);      
+            
+        @for $i from 1 through 5 {
+           &_number-#{$i}{
+                 background-color: green;
+                width: calc(100%);
+                height: calc(95vh - 10vh);
+               outline: 1px solid black;
+            }
+
+        section{
+          display: none;
+         }    
+
+         @for $i from 1 through 5{    
+            #slaiderRadio-#{$i}:checked ~ .header__nav_number-#{$i}{
+            display: block;
+            
+     }
+         }    
+        }  
+         
+        
+}
+
+
+
+
+
+}
