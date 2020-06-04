@@ -5,17 +5,159 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
     <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        .header {
+            width: calc(100vw - 1.5vw);
+            height: 100vh;
+          
+            position: relative;
+            margin: 0 auto;
+        }
+
+
+        .header__header {
+            width: calc(100% - 6vw);
+            height: 10vh;
+            background-image: linear-gradient(to left, rgb(169, 173, 100), rgb(163, 168, 92), rgb(157, 164, 85),
+             rgb(150, 159, 77), rgb(144, 155, 70), rgb(138, 150, 62), rgb(134, 151, 64), rgb(129, 153, 65),
+             rgb(125, 154, 67), rgb(121, 155, 69), rgb(116, 157, 70), rgb(112, 158, 72));
+            color: rgb(36, 37, 26);
+            box-shadow: inset 0 -5px 10px 2px black;
+            padding-left: 3vw;
+            padding-right: 3vw;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header__header_logo{
+            text-shadow: 0 0 10px rgb(35, 37, 35);
+            font-size: 2em;
+        }
+
+
+        .header__header_menu {
+           
+            justify-self: end
+        }
+
+
+        .header__nav {
+            width: calc(100%);            
+           
+        }
+
+        .header>.header__nav>.header__nav_slid img {
+            width: calc(100%);           
+           
+        }
+
+        .header__nav_slid {
+            display: none;
+            width: calc(100%);
+         
+        }
+
+
+        #slaiderRadio-1:checked~.header__nav_number-1,
+        #slaiderRadio-2:checked~.header__nav_number-2,
+        #slaiderRadio-3:checked~.header__nav_number-3,
+        #slaiderRadio-4:checked~.header__nav_number-4,
+        #slaiderRadio-5:checked~.header__nav_number-5 {
+            display: block;
+            position: relative;
+            width: 100%;
+        }
+
       
+        label::before {
+            position: absolute;
+        
+            content: "";
+            border: 20px solid rgba(230, 226, 12, 0.5);
+            display: inline-block;
+            z-index: 2;
+            border-top-color: transparent;
+            border-bottom-color: transparent;
+        }
+
+        .prevSlide::before{   
+            border-left-color: transparent;     
+            left: 5vw;
+            top: 40%;
+           
+        }
+
+        .nextSlide::before{   
+            border-right-color: transparent;     
+            right: 5vw;
+            top: 40%;
+        }
+
+        input{
+            display: none;
+        }
+
+        .header__header_menu>a{
+            display: inline-block;
+            width: 6vh;
+            height: 6vh;
+            border: 2px solid rgba(80, 76, 76, 0.5);
+            box-shadow: 0 0 5pxrgba(80, 76, 76, 0.5) 1px black;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .header__header_menu>a div{
+            width: 3vh;
+            height: .5vh;
+            background-color: rgba(80, 76, 76, 0.5);
+           
+            position: absolute;
+            top: calc(50% - 0.25vh);
+            left: calc(3vh / 2);
+        }
+
+        .header__header_menu>a div::after{
+            content: "";
+            width: 3vh;
+            height: .48vh;
+            background-color: rgba(80, 76, 76, 0.5);
+            position: absolute;
+            top: -1.25vh;
+       
+        }
+
+        .header__header_menu>a div::before{
+            content: "";
+            width: 3vh;
+            height: .5vh;
+            background-color: rgba(80, 76, 76, 0.5);
+            position: absolute;
+            bottom: -1.2vh;
+           
+        }
+
+
     </style>
 </head>
 
 <body>
     <header class="header">
         <div class="header__header">
-            <h1 class="header__header_logo">LOGO</h1>
-            <div class="header__header_menu">Меню</div>
+            <h1 class="header__header_logo">TRX</h1>
+            <div class="header__header_menu">
+                <a href="#"> 
+                  <div>
+                  </div>
+                </a>                            
+            </div>
         </div>
         <nav class="header__nav">
             <input id="slaiderRadio-1" type="radio" name="slider" checked>
@@ -26,19 +168,29 @@
 
 
             <section class="header__nav_slid header__nav_number-1">
-                <label for="slaiderRadio-1">1</label>
+                <img src="img/3.jpg" alt="">
+                <label for="slaiderRadio-5" class="prevSlide"></label>
+                <label for="slaiderRadio-2" class="nextSlide"></label>
             </section>
             <section class="header__nav_slid header__nav_number-2">
-                <label for="slaiderRadio-2">2</label>
+                <img src="img/Фон.jpg" alt="">
+                <label for="slaiderRadio-1" class="prevSlide"></label>
+                <label for="slaiderRadio-3" class="nextSlide"></label>
             </section>
             <section class="header__nav_slid header__nav_number-3">
-                <label for="slaiderRadio-3">3</label>
+                <img src="img/5.png" alt="">
+                <label for="slaiderRadio-2" class="prevSlide"></label>
+                <label for="slaiderRadio-4" class="nextSlide"></label>
             </section>
             <section class="header__nav_slid header__nav_number-4">
-                <label for="slaiderRadio-4">4</label>
+                <img src="img/image2.jpg" alt="">
+                <label for="slaiderRadio-3" class="prevSlide"></label>
+                <label for="slaiderRadio-5" class="nextSlide"></label>
             </section>
             <section class="header__nav_slid header__nav_number-5">
-                <label for="slaiderRadio-5">5</label>
+                <img src="img/photo-.jpg" alt="">
+                <label for="slaiderRadio-4" class="prevSlide"></label>
+                <label for="slaiderRadio-1" class="nextSlide"></label>
             </section>
         </nav>
     </header>

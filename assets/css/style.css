@@ -5,15 +5,13 @@ body {
 .header {
   width: 100vw;
   height: 95vh;
-  outline: 1px solid black;
   position: relative;
 }
 
 .header__header {
   width: calc(100% - 6vw);
   height: 10vh;
-  background-color: blue;
-  color: yellow;
+  color: grey;
   padding-left: 3vw;
   padding-right: 3vw;
   display: -webkit-box;
@@ -28,7 +26,6 @@ body {
 }
 
 .header__header .header__header_menu {
-  outline: 2px solid gold;
   -ms-grid-column-align: end;
       justify-self: end;
 }
@@ -38,158 +35,310 @@ body {
   height: calc(95vh - 10vh);
 }
 
-.header__nav_number-1 {
-  background-color: green;
+.header__nav_number-1 img {
   width: calc(100%);
   height: calc(95vh - 10vh);
-  outline: 1px solid black;
 }
 
-.header__nav section {
+.header__nav .header__nav_slid {
   display: none;
+  position: relative;
 }
 
 .header__nav #slaiderRadio-1:checked ~ .header__nav_number-1 {
   display: block;
+  position: relative;
+}
+
+.header__nav .nextSlide::after {
+  right: 0;
+  bottom: 50%;
 }
 
 .header__nav #slaiderRadio-2:checked ~ .header__nav_number-2 {
   display: block;
+  position: relative;
+}
+
+.header__nav .nextSlide::after {
+  right: 0;
+  bottom: 50%;
 }
 
 .header__nav #slaiderRadio-3:checked ~ .header__nav_number-3 {
   display: block;
+  position: relative;
+}
+
+.header__nav .nextSlide::after {
+  right: 0;
+  bottom: 50%;
 }
 
 .header__nav #slaiderRadio-4:checked ~ .header__nav_number-4 {
   display: block;
+  position: relative;
+}
+
+.header__nav .nextSlide::after {
+  right: 0;
+  bottom: 50%;
 }
 
 .header__nav #slaiderRadio-5:checked ~ .header__nav_number-5 {
   display: block;
+  position: relative;
 }
 
-.header__nav_number-2 {
-  background-color: green;
+.header__nav .nextSlide::after {
+  right: 0;
+  bottom: 50%;
+}
+
+.header__nav_number-2 img {
   width: calc(100%);
   height: calc(95vh - 10vh);
-  outline: 1px solid black;
 }
 
-.header__nav section {
+.header__nav .header__nav_slid {
   display: none;
+  position: relative;
 }
 
 .header__nav #slaiderRadio-1:checked ~ .header__nav_number-1 {
   display: block;
+  position: relative;
+}
+
+.header__nav .nextSlide::after {
+  right: 0;
+  bottom: 50%;
 }
 
 .header__nav #slaiderRadio-2:checked ~ .header__nav_number-2 {
   display: block;
+  position: relative;
+}
+
+.header__nav .nextSlide::after {
+  right: 0;
+  bottom: 50%;
 }
 
 .header__nav #slaiderRadio-3:checked ~ .header__nav_number-3 {
   display: block;
+  position: relative;
+}
+
+.header__nav .nextSlide::after {
+  right: 0;
+  bottom: 50%;
 }
 
 .header__nav #slaiderRadio-4:checked ~ .header__nav_number-4 {
   display: block;
+  position: relative;
+}
+
+.header__nav .nextSlide::after {
+  right: 0;
+  bottom: 50%;
 }
 
 .header__nav #slaiderRadio-5:checked ~ .header__nav_number-5 {
   display: block;
+  position: relative;
 }
 
-.header__nav_number-3 {
-  background-color: green;
+.header__nav .nextSlide::after {
+  right: 0;
+  bottom: 50%;
+}
+
+.header__nav_number-3 img {
   width: calc(100%);
   height: calc(95vh - 10vh);
-  outline: 1px solid black;
 }
 
-.header__nav section {
+.header__nav .header__nav_slid {
   display: none;
+  position: relative;
 }
 
 .header__nav #slaiderRadio-1:checked ~ .header__nav_number-1 {
   display: block;
+  position: relative;
+}
+
+.header__nav .nextSlide::after {
+  right: 0;
+  bottom: 50%;
 }
 
 .header__nav #slaiderRadio-2:checked ~ .header__nav_number-2 {
   display: block;
+  position: relative;
+}
+
+.header__nav .nextSlide::after {
+  right: 0;
+  bottom: 50%;
 }
 
 .header__nav #slaiderRadio-3:checked ~ .header__nav_number-3 {
   display: block;
+  position: relative;
+}
+
+.header__nav .nextSlide::after {
+  right: 0;
+  bottom: 50%;
 }
 
 .header__nav #slaiderRadio-4:checked ~ .header__nav_number-4 {
   display: block;
+  position: relative;
+}
+
+.header__nav .nextSlide::after {
+  right: 0;
+  bottom: 50%;
 }
 
 .header__nav #slaiderRadio-5:checked ~ .header__nav_number-5 {
   display: block;
+  position: relative;
 }
 
-.header__nav_number-4 {
-  background-color: green;
+.header__nav .nextSlide::after {
+  right: 0;
+  bottom: 50%;
+}
+
+.header__nav_number-4 img {
   width: calc(100%);
   height: calc(95vh - 10vh);
-  outline: 1px solid black;
 }
 
-.header__nav section {
+.header__nav .header__nav_slid {
   display: none;
+  position: relative;
 }
 
 .header__nav #slaiderRadio-1:checked ~ .header__nav_number-1 {
   display: block;
+  position: relative;
+}
+
+.header__nav .nextSlide::after {
+  right: 0;
+  bottom: 50%;
 }
 
 .header__nav #slaiderRadio-2:checked ~ .header__nav_number-2 {
   display: block;
+  position: relative;
+}
+
+.header__nav .nextSlide::after {
+  right: 0;
+  bottom: 50%;
 }
 
 .header__nav #slaiderRadio-3:checked ~ .header__nav_number-3 {
   display: block;
+  position: relative;
+}
+
+.header__nav .nextSlide::after {
+  right: 0;
+  bottom: 50%;
 }
 
 .header__nav #slaiderRadio-4:checked ~ .header__nav_number-4 {
   display: block;
+  position: relative;
+}
+
+.header__nav .nextSlide::after {
+  right: 0;
+  bottom: 50%;
 }
 
 .header__nav #slaiderRadio-5:checked ~ .header__nav_number-5 {
   display: block;
+  position: relative;
 }
 
-.header__nav_number-5 {
-  background-color: green;
+.header__nav .nextSlide::after {
+  right: 0;
+  bottom: 50%;
+}
+
+.header__nav_number-5 img {
   width: calc(100%);
   height: calc(95vh - 10vh);
-  outline: 1px solid black;
 }
 
-.header__nav section {
+.header__nav .header__nav_slid {
   display: none;
+  position: relative;
 }
 
 .header__nav #slaiderRadio-1:checked ~ .header__nav_number-1 {
   display: block;
+  position: relative;
+}
+
+.header__nav .nextSlide::after {
+  right: 0;
+  bottom: 50%;
 }
 
 .header__nav #slaiderRadio-2:checked ~ .header__nav_number-2 {
   display: block;
+  position: relative;
+}
+
+.header__nav .nextSlide::after {
+  right: 0;
+  bottom: 50%;
 }
 
 .header__nav #slaiderRadio-3:checked ~ .header__nav_number-3 {
   display: block;
+  position: relative;
+}
+
+.header__nav .nextSlide::after {
+  right: 0;
+  bottom: 50%;
 }
 
 .header__nav #slaiderRadio-4:checked ~ .header__nav_number-4 {
   display: block;
+  position: relative;
+}
+
+.header__nav .nextSlide::after {
+  right: 0;
+  bottom: 50%;
 }
 
 .header__nav #slaiderRadio-5:checked ~ .header__nav_number-5 {
   display: block;
+  position: relative;
+}
+
+.header__nav .nextSlide::after {
+  right: 0;
+  bottom: 50%;
+}
+
+.header__nav label::before {
+  position: relative;
+  content: "";
+  border: 20px solid red;
+  display: inline-block;
 }
 /*# sourceMappingURL=style.css.map */
