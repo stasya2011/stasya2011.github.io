@@ -54,7 +54,8 @@
         }
 
         .header>.header__nav>.header__nav_slid img {
-            width: calc(100%);           
+            width: calc(100%); 
+            z-index: 1;           
            
         }
 
@@ -76,13 +77,13 @@
         }
 
       
-        label::before {
+        .header__nav_label::before {
             position: absolute;
         
             content: "";
             border: 20px solid rgba(230, 226, 12, 0.5);
             display: inline-block;
-            z-index: 2;
+      
             border-top-color: transparent;
             border-bottom-color: transparent;
         }
@@ -122,6 +123,8 @@
             position: absolute;
             top: calc(50% - 0.25vh);
             left: calc(3vh / 2);
+
+           
         }
 
         .header__header_menu>a div::after{
@@ -144,6 +147,53 @@
            
         }
 
+        .header__header_menu>a>div>ul{    
+            font-size: 1.8vw;  
+            width: 20vw;
+            height: 30vh;     
+            transition: all 1s linear 0s;   
+                
+        } 
+
+        .header__header_menu>a>div>ul{
+            display: none;
+        }
+
+
+        
+        /*при наведении на меню - открывается меню*/
+        .header__header_menu>a:hover>div>ul{
+            display: inline-block;
+          
+            position: absolute;
+            top: 3vh;
+            right: -3vw;
+            background-color: rgba(91, 91, 109, 0.4);
+            z-index: 2;  
+  
+           
+        }
+
+        .header__header_menu>a:hover div{
+            background-color: transparent;
+        }
+
+        .header__header_menu>a:hover div::before,
+        .header__header_menu>a:hover div::after
+        {
+            transform-origin: center center;        
+         
+        }
+
+        .header__header_menu>a:hover div::before{
+            transform: rotate(45deg);
+            bottom: 25%;
+        }
+
+        .header__header_menu>a:hover div::after{
+            transform: rotate(-45deg);
+            top: 25%
+        }
 
     </style>
 </head>
@@ -154,8 +204,14 @@
             <h1 class="header__header_logo">TRX</h1>
             <div class="header__header_menu">
                 <a href="#"> 
-                  <div>
-                  </div>
+                    <div>
+                        <ul>
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                        </ul>
+                    </div>
                 </a>                            
             </div>
         </div>
@@ -169,28 +225,28 @@
 
             <section class="header__nav_slid header__nav_number-1">
                 <img src="img/3.jpg" alt="">
-                <label for="slaiderRadio-5" class="prevSlide"></label>
-                <label for="slaiderRadio-2" class="nextSlide"></label>
+                <label for="slaiderRadio-5" class="header__nav_label prevSlide"></label>
+                <label for="slaiderRadio-2" class="header__nav_label nextSlide"></label>
             </section>
             <section class="header__nav_slid header__nav_number-2">
                 <img src="img/Фон.jpg" alt="">
-                <label for="slaiderRadio-1" class="prevSlide"></label>
-                <label for="slaiderRadio-3" class="nextSlide"></label>
+                <label for="slaiderRadio-1" class="header__nav_label prevSlide"></label>
+                <label for="slaiderRadio-3" class="header__nav_label nextSlide"></label>
             </section>
             <section class="header__nav_slid header__nav_number-3">
                 <img src="img/5.png" alt="">
-                <label for="slaiderRadio-2" class="prevSlide"></label>
-                <label for="slaiderRadio-4" class="nextSlide"></label>
+                <label for="slaiderRadio-2" class="header__nav_label prevSlide"></label>
+                <label for="slaiderRadio-4" class="header__nav_label nextSlide"></label>
             </section>
             <section class="header__nav_slid header__nav_number-4">
                 <img src="img/image2.jpg" alt="">
-                <label for="slaiderRadio-3" class="prevSlide"></label>
-                <label for="slaiderRadio-5" class="nextSlide"></label>
+                <label for="slaiderRadio-3" class="header__nav_label prevSlide"></label>
+                <label for="slaiderRadio-5" class="header__nav_label nextSlide"></label>
             </section>
             <section class="header__nav_slid header__nav_number-5">
                 <img src="img/photo-.jpg" alt="">
-                <label for="slaiderRadio-4" class="prevSlide"></label>
-                <label for="slaiderRadio-1" class="nextSlide"></label>
+                <label for="slaiderRadio-4" class="header__nav_label header__nav_labelprevSlide"></label>
+                <label for="slaiderRadio-1" class="header__nav_label nextSlide"></label>
             </section>
         </nav>
     </header>
