@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+  
     <style>
         body {
             margin: 0;
@@ -55,7 +56,9 @@
 
         .header>.header__nav>.header__nav_slid img {
             width: calc(100%); 
-            z-index: 1;           
+            /* z-index: 1;  
+            */
+
            
         }
 
@@ -78,8 +81,7 @@
 
       
         .header__nav_label::before {
-            position: absolute;
-        
+            position: absolute;        
             content: "";
             border: 20px solid rgba(230, 226, 12, 0.5);
             display: inline-block;
@@ -151,6 +153,10 @@
 
         .header__header_menu>.header__header_linkCircle>div>ul{
             display: none;
+            background-color: rgba(7, 78, 57, 0.6);
+            z-index: 2;  
+            font-size: 1.8vw;  
+            width: 30vw;
         }
 
 
@@ -170,6 +176,7 @@
             margin-top: 5%;
             background-color: rgba(76, 155, 155, 0.5);
             box-shadow: 0 0.5vw .5vw black;
+            border-radius: 5vh;
            
         }
 
@@ -179,7 +186,10 @@
 
         .header__header_menu>.header__header_linkCircle>div>ul a{
             width: 100%;
-          
+            height: 10vh;
+            line-height:10vh;
+            padding-left: 2vw;
+            vertical-align: middle;
             color: rgb(240, 240, 20);         
             }
 
@@ -194,10 +204,7 @@
             position: absolute;
             top: 3vh;
             right: -3vw;
-            background-color: rgba(7, 78, 57, 0.6);
-            z-index: 2;  
-            font-size: 1.8vw;  
-            width: 25vw;
+           
            
              
         }
@@ -226,6 +233,68 @@
 
 
 
+
+        /*текст на картинке*/
+
+        .header__nav .header__nav_slid{
+            position: absolute;
+        }
+        .header__nav .header__nav_slid .header__nav_text{
+            position: absolute;
+            top:calc(50% - 5vw);
+            left:calc(50% - 12vw);
+            /* font-family: 'Open Sans', sans-serif; */
+            font-size: 3vw;
+        }
+
+        .header__nav .header__nav_slid .header__nav_text h2{
+            margin: 0;
+            color: rgb(255, 29, 153);
+        }
+
+        .header__nav .header__nav_slid .header__nav_text .header__nav_buttonLink{
+            position: absolute;
+            top: 5vw;
+            left: 20%;
+            margin: 2vw;
+            width: 15vw;
+            height: 6vw;
+            vertical-align: middle;
+            line-height: 6vw;
+            text-align: center;
+            border: 2px solid rgb(85, 131, 44);          
+            border-radius: 5vw;
+            background-color:  rgba(112, 158, 72, .5);
+            
+
+            animation-name: bottonLink;
+            animation-delay: 2s;
+            animation-duration: 1.2s;
+            animation-direction: alternate;
+            animation-timing-function: ease-out;
+            animation-iteration-count: infinite;
+          
+        }
+
+        .header__nav_text .header__nav_buttonLink a{
+            text-decoration: none;
+        }
+
+        @keyframes bottonLink {
+            0%{
+                transform: translateY(0);
+           
+            }
+            50%{
+                transform: translateY(-1vw);
+                transform: scale(1.1);
+               
+            }
+            
+            100%{
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 
@@ -237,9 +306,9 @@
                 <div class="header__header_linkCircle" href="#"> 
                     <div>
                         <ul>                            
-                            <li> <a class="header__header_linkPage" href="#">ЧТо нужно знать о TRX </a> </li>
+                            <li> <a class="header__header_linkPage" href="#">Что такое TRX </a> </li>
                             <li> <a class="header__header_linkPage" href="#">А теперь поговорим про петли</a> </li>
-                            <li> <a class="header__header_linkPage" href="#"> Ну и конечно базовые упражнения trx </a> </li>
+                            <li> <a class="header__header_linkPage" href="#"> Базовые упражнения trx </a> </li>
                             <li> <a class="header__header_linkPage" href="#">Особенности trx</a> </li>
                         </ul>
                     </div>
@@ -256,26 +325,44 @@
 
             <section class="header__nav_slid header__nav_number-1">
                 <img src="img/3.jpg" alt="">
+                <div class='header__nav_text'>
+                    <h2> Что такое TRX </h2>
+                    <div class="header__nav_buttonLink"><a href="#">MORE</a>
+                    </div>
+                </div>
                 <label for="slaiderRadio-5" class="header__nav_label prevSlide"></label>
                 <label for="slaiderRadio-2" class="header__nav_label nextSlide"></label>
             </section>
             <section class="header__nav_slid header__nav_number-2">
                 <img src="img/Фон.jpg" alt="">
+                <h2> Что такое TRX </h2>
+                <div class="header__nav_buttonLink"><a href="#">MORE</a>
+                </div>
+                </div>
                 <label for="slaiderRadio-1" class="header__nav_label prevSlide"></label>
                 <label for="slaiderRadio-3" class="header__nav_label nextSlide"></label>
             </section>
             <section class="header__nav_slid header__nav_number-3">
                 <img src="img/5.png" alt="">
+                <h2> Что такое TRX </h2>
+                <div class="header__nav_buttonLink"><a href="#">MORE</a>
+                </div>
                 <label for="slaiderRadio-2" class="header__nav_label prevSlide"></label>
                 <label for="slaiderRadio-4" class="header__nav_label nextSlide"></label>
             </section>
             <section class="header__nav_slid header__nav_number-4">
                 <img src="img/image2.jpg" alt="">
+                <h2> Что такое TRX </h2>
+                <div class="header__nav_buttonLink"><a href="#">MORE</a>
+                </div>
                 <label for="slaiderRadio-3" class="header__nav_label prevSlide"></label>
                 <label for="slaiderRadio-5" class="header__nav_label nextSlide"></label>
             </section>
             <section class="header__nav_slid header__nav_number-5">
                 <img src="img/photo-.jpg" alt="">
+                <h2> Что такое TRX </h2>
+                <div class="header__nav_buttonLink"><a href="#">MORE</a>
+                </div>
                 <label for="slaiderRadio-4" class="header__nav_label header__nav_labelprevSlide"></label>
                 <label for="slaiderRadio-1" class="header__nav_label nextSlide"></label>
             </section>
