@@ -105,7 +105,7 @@
             display: none;
         }
 
-        .header__header_menu>a{
+        .header__header_menu>.header__header_linkCircle{
             display: inline-block;
             width: 6vh;
             height: 6vh;
@@ -113,9 +113,11 @@
             box-shadow: 0 0 5pxrgba(80, 76, 76, 0.5) 1px black;
             border-radius: 50%;
             position: relative;
+          
+                
         }
 
-        .header__header_menu>a div{
+        .header__header_menu>.header__header_linkCircle div{
             width: 3vh;
             height: .5vh;
             background-color: rgba(80, 76, 76, 0.5);
@@ -123,77 +125,106 @@
             position: absolute;
             top: calc(50% - 0.25vh);
             left: calc(3vh / 2);
-
-           
+      
         }
 
-        .header__header_menu>a div::after{
+        .header__header_menu>.header__header_linkCircle div::after{
             content: "";
             width: 3vh;
             height: .48vh;
             background-color: rgba(80, 76, 76, 0.5);
             position: absolute;
-            top: -1.25vh;
+            top: -1.25vh;            
        
         }
 
-        .header__header_menu>a div::before{
+        .header__header_menu>.header__header_linkCircle div::before{
             content: "";
             width: 3vh;
             height: .5vh;
             background-color: rgba(80, 76, 76, 0.5);
             position: absolute;
             bottom: -1.2vh;
-           
+                      
         }
 
-        .header__header_menu>a>div>ul{    
-            font-size: 1.8vw;  
-            width: 20vw;
-            height: 30vh;     
-            transition: all 1s linear 0s;   
-                
-        } 
 
-        .header__header_menu>a>div>ul{
+        .header__header_menu>.header__header_linkCircle>div>ul{
             display: none;
         }
 
 
+        .header__header_menu>.header__header_linkCircle>div>ul li,
+        .header__header_menu>.header__header_linkCircle>div>ul a
+        {
+            list-style: none;
+            text-decoration: none;
+        }
         
-        /*при наведении на меню - открывается меню*/
-        .header__header_menu>a:hover>div>ul{
-            display: inline-block;
-          
-            position: absolute;
-            top: 3vh;
-            right: -3vw;
-            background-color: rgba(91, 91, 109, 0.4);
-            z-index: 2;  
-  
+        .header__header_menu>.header__header_linkCircle>div>ul li
+        {   
+            width: 100%;
+            height: 10vh;
+            /* outline: 1px solid red; */
+            margin-left: -5%;
+            margin-top: 5%;
+            background-color: rgba(76, 155, 155, 0.5);
+            box-shadow: 0 0.5vw .5vw black;
            
         }
 
-        .header__header_menu>a:hover div{
+        .header__header_menu>.header__header_linkCircle>div>ul li:nth-last-child(1){
+            margin-bottom: 5%;
+        }
+
+        .header__header_menu>.header__header_linkCircle>div>ul a{
+            width: 100%;
+          
+            color: rgb(240, 240, 20);         
+            }
+
+        /*при наведении на меню - открывается меню*/
+        .header__header_menu>.header__header_linkCircle:hover>div>ul
+        {
+            display: grid; 
+            grid-template-columns: 1fr; 
+            grid-template-rows: repeat(1fr,4 ); 
+            justify-content: space-between;
+            /* align-content: center;    */
+            position: absolute;
+            top: 3vh;
+            right: -3vw;
+            background-color: rgba(7, 78, 57, 0.6);
+            z-index: 2;  
+            font-size: 1.8vw;  
+            width: 25vw;
+           
+             
+        }
+        
+     
+        .header__header_menu>.header__header_linkCircle:hover div{
             background-color: transparent;
         }
 
-        .header__header_menu>a:hover div::before,
-        .header__header_menu>a:hover div::after
+        .header__header_menu>.header__header_linkCircle:hover div::before,
+        .header__header_menu>.header__header_linkCircle:hover div::after
         {
             transform-origin: center center;        
-         
+            
         }
 
-        .header__header_menu>a:hover div::before{
+        .header__header_menu>.header__header_linkCircle:hover div::before{
             transform: rotate(45deg);
             bottom: 25%;
         }
 
-        .header__header_menu>a:hover div::after{
+        .header__header_menu>.header__header_linkCircle:hover div::after{
             transform: rotate(-45deg);
             top: 25%
         }
+
+
 
     </style>
 </head>
@@ -203,16 +234,16 @@
         <div class="header__header">
             <h1 class="header__header_logo">TRX</h1>
             <div class="header__header_menu">
-                <a href="#"> 
+                <div class="header__header_linkCircle" href="#"> 
                     <div>
-                        <ul>
-                            <li>1</li>
-                            <li>2</li>
-                            <li>3</li>
-                            <li>4</li>
+                        <ul>                            
+                            <li> <a class="header__header_linkPage" href="#">ЧТо нужно знать о TRX </a> </li>
+                            <li> <a class="header__header_linkPage" href="#">А теперь поговорим про петли</a> </li>
+                            <li> <a class="header__header_linkPage" href="#"> Ну и конечно базовые упражнения trx </a> </li>
+                            <li> <a class="header__header_linkPage" href="#">Особенности trx</a> </li>
                         </ul>
                     </div>
-                </a>                            
+                </div>                            
             </div>
         </div>
         <nav class="header__nav">
