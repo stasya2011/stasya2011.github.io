@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+    <link rel="stylesheet" href="assets/css/style.css">
   
     <style>
         body {
@@ -15,19 +15,17 @@
 
         .header {
             width: calc(100vw - 1.5vw);
-            height: 100vh;
-          
+            height: 100vh;          
             position: relative;
             margin: 0 auto;
         }
-
 
         .header__header {
             width: calc(100% - 6vw);
             height: 10vh;
             background-image: linear-gradient(to left, rgb(169, 173, 100), rgb(163, 168, 92), rgb(157, 164, 85),
-             rgb(150, 159, 77), rgb(144, 155, 70), rgb(138, 150, 62), rgb(134, 151, 64), rgb(129, 153, 65),
-             rgb(125, 154, 67), rgb(121, 155, 69), rgb(116, 157, 70), rgb(112, 158, 72));
+            rgb(150, 159, 77), rgb(144, 155, 70), rgb(138, 150, 62), rgb(134, 151, 64), rgb(129, 153, 65),
+            rgb(125, 154, 67), rgb(121, 155, 69), rgb(116, 157, 70), rgb(112, 158, 72));
             color: rgb(36, 37, 26);
             box-shadow: inset 0 -5px 10px 2px black;
             padding-left: 3vw;
@@ -42,32 +40,27 @@
             font-size: 2em;
         }
 
-
-        .header__header_menu {
-           
+        .header__header_menu {          
             justify-self: end
         }
-
 
         .header__nav {
             width: calc(100%);            
            
         }
 
-        .header>.header__nav>.header__nav_slid img {
-            width: calc(100%); 
-            /* z-index: 1;  
-            */
 
-           
+        .header>.header__nav>.header__nav_slid img {
+            width: 100%; 
+            height: 90vh; 
+            position: relative;
         }
 
         .header__nav_slid {
             display: none;
-            width: calc(100%);
-         
+            width: calc(100%); 
+            position: relative;        
         }
-
 
         #slaiderRadio-1:checked~.header__nav_number-1,
         #slaiderRadio-2:checked~.header__nav_number-2,
@@ -103,7 +96,7 @@
             top: 40%;
         }
 
-        input{
+        .header input{
             display: none;
         }
 
@@ -122,8 +115,7 @@
         .header__header_menu>.header__header_linkCircle div{
             width: 3vh;
             height: .5vh;
-            background-color: rgba(80, 76, 76, 0.5);
-           
+            background-color: rgba(80, 76, 76, 0.5);           
             position: absolute;
             top: calc(50% - 0.25vh);
             left: calc(3vh / 2);
@@ -153,17 +145,19 @@
 
         .header__header_menu>.header__header_linkCircle>div>ul{
             display: none;
-            background-color: rgba(7, 78, 57, 0.6);
+            background-image: linear-gradient(to bottom,rgba(125, 154, 67, .7),
+             rgba(121, 155, 69, .7),
+              rgba(116, 157, 70, .7), 
+              rgba(112, 158, 72, .7));
+            color: rgb(36, 37, 26);
             z-index: 2;  
             font-size: 1.8vw;  
             width: 30vw;
         }
 
-
-        .header__header_menu>.header__header_linkCircle>div>ul li,
+      
         .header__header_menu>.header__header_linkCircle>div>ul a
         {
-            list-style: none;
             text-decoration: none;
         }
         
@@ -171,12 +165,12 @@
         {   
             width: 100%;
             height: 10vh;
-            /* outline: 1px solid red; */
             margin-left: -5%;
             margin-top: 5%;
             background-color: rgba(76, 155, 155, 0.5);
             box-shadow: 0 0.5vw .5vw black;
             border-radius: 5vh;
+            list-style: none;
            
         }
 
@@ -200,13 +194,10 @@
             grid-template-columns: 1fr; 
             grid-template-rows: repeat(1fr,4 ); 
             justify-content: space-between;
-            /* align-content: center;    */
             position: absolute;
-            top: 3vh;
-            right: -3vw;
-           
-           
-             
+            top: -0.4vh;
+            right: -3vw;         
+                        
         }
         
      
@@ -231,19 +222,12 @@
             top: 25%
         }
 
-
-
-
         /*текст на картинке*/
 
-        .header__nav .header__nav_slid{
-            position: absolute;
-        }
         .header__nav .header__nav_slid .header__nav_text{
             position: absolute;
             top:calc(50% - 5vw);
             left:calc(50% - 12vw);
-            /* font-family: 'Open Sans', sans-serif; */
             font-size: 3vw;
         }
 
@@ -252,7 +236,7 @@
             color: rgb(255, 29, 153);
         }
 
-        .header__nav .header__nav_slid .header__nav_text .header__nav_buttonLink{
+        .header__nav .header__nav_slid .header__nav_text>.header__nav_buttonLink{
             position: absolute;
             top: 5vw;
             left: 20%;
@@ -264,8 +248,7 @@
             text-align: center;
             border: 2px solid rgb(85, 131, 44);          
             border-radius: 5vw;
-            background-color:  rgba(112, 158, 72, .5);
-            
+            background-color:  rgba(112, 158, 72, .5);            
 
             animation-name: bottonLink;
             animation-delay: 2s;
@@ -294,6 +277,10 @@
             100%{
                 transform: translateY(0);
             }
+        }
+
+        .header{
+            margin-bottom: 1vw;
         }
     </style>
 </head>
@@ -334,7 +321,7 @@
                 <label for="slaiderRadio-2" class="header__nav_label nextSlide"></label>
             </section>
             <section class="header__nav_slid header__nav_number-2">
-                <img src="img/Фон.jpg" alt="">
+                <img src="img/img_11.jpg" alt="">
                 <h2> Что такое TRX </h2>
                 <div class="header__nav_buttonLink"><a href="#">MORE</a>
                 </div>
@@ -343,7 +330,7 @@
                 <label for="slaiderRadio-3" class="header__nav_label nextSlide"></label>
             </section>
             <section class="header__nav_slid header__nav_number-3">
-                <img src="img/5.png" alt="">
+                <img src="img/5.jpg" alt="">
                 <h2> Что такое TRX </h2>
                 <div class="header__nav_buttonLink"><a href="#">MORE</a>
                 </div>
@@ -351,8 +338,8 @@
                 <label for="slaiderRadio-4" class="header__nav_label nextSlide"></label>
             </section>
             <section class="header__nav_slid header__nav_number-4">
-                <img src="img/image2.jpg" alt="">
-                <h2> Что такое TRX </h2>
+                <img src="img/image22.jpg" alt="">
+                <h2> Что такое подвесной тренинг</h2>
                 <div class="header__nav_buttonLink"><a href="#">MORE</a>
                 </div>
                 <label for="slaiderRadio-3" class="header__nav_label prevSlide"></label>
@@ -363,11 +350,128 @@
                 <h2> Что такое TRX </h2>
                 <div class="header__nav_buttonLink"><a href="#">MORE</a>
                 </div>
-                <label for="slaiderRadio-4" class="header__nav_label header__nav_labelprevSlide"></label>
+                <label for="slaiderRadio-4" class="header__nav_label prevSlide"></label>
                 <label for="slaiderRadio-1" class="header__nav_label nextSlide"></label>
             </section>
         </nav>
     </header>
+
+
+    <main class="content">
+        <section class="content__page1">
+            <div class="content__page1_history">
+                <h3 class="content__page1_caption"> Что такое подвесной тренинг</h3>
+                <p>
+                Подвесной тренинг — разновидность силового тренинга, при котором
+                используют подвесные системы из веревок или ремней, позволяющих выполнять упражнения, 
+                используя в виде отягощения собственный вес человека.
+                Еще в XIX веке гимнасты и цирковые акробаты тренировались и выступали с подобными штуками. 
+                Этому есть документальные свидетельства. В 1886 году в Нью-Йорке была издана книга “Athletic sports for boys”, 
+                где они подробно описывались.<br>
+                
+        
+                TRX (Total Body Resistance Exercise) – это аббревиатура.
+                Просто эти три буквы стали уже нарицательными и мы так называем все петли для подвесного тренинга.
+                Похожая история произошла с брендами Xerox, Jeep, Aspirin и др.<br>
+           
+              
+
+                Чуть позже он ушел в отставку с военной службы и получая экономическое образование, параллельно доводил свое изобретение «до ума».
+                Дизайн и функционал его петли был изменен, по его признанию, не менее полсотни раз. В конце концов, получилось то, что мы сейчас видим в каждом уважающем себя фитнес-клубе.
+         
+            </p>
+
+          
+                <div class="content__slide">
+                    <input id="content__slide_input-1" type="radio" name="content__slide" checked>
+                    <input id="content__slide_input-2" type="radio" name="content__slide">
+                    <input id="content__slide_input-3" type="radio" name="content__slide">
+                    <input id="content__slide_input-4" type="radio" name="content__slide">                   
+
+                    <figure class="content__figure content__figure_block-1">
+                        <img src="img/content_1.jpg" alt="Картинка из книги 1886 года">
+                        <label for="content__slide_input-4" class="content__figure_label prevSlide"></label>
+                        <label for="content__slide_input-2" class="content__figure_label nextSlide"></label>
+                        <figcaption class="content__figure_caption">Иллюстрация из книги 1866 г.<br>«Athletic sports for boys»</figcaption>
+                        
+
+                    </figure>
+
+                    <figure class="content__figure content__figure_block-2">
+                        <img src="img/content_2.jpg" alt="">
+                        <label for="content__slide_input-1" class="content__figure_label prevSlide"></label>
+                        <label for="content__slide_input-3" class="content__figure_label nextSlide"></label>
+                        <figcaption class="content__figure_caption">Рэнди Хетрик</figcaption>
+
+                        <div class = "content__figure_hidden">
+                            Методически выверенные техники тренировок с собственным весом были представлены среди акробатов в
+                            Древнем Риме и Китае, которые уже тогда славились своими превосходными спортивными качествами. 
+                            Акробаты из Древнего Китая были известны на весь мир как искусные гимнасты.
+
+                            В 19 веке в воинских подразделениях разных стран начинают разрабатываться методики упражнений с веревками 
+                            для подготовки к тяжелым боям и условиям горных экспедиций. Подобные «подвесные» тренировки встречаются и
+                            среди первых альпинистов.
+                       </div>                   
+                       
+                    </figure>
+
+                    <figure class="content__figure content__figure_block-3">
+                        <img src="img/content_3.jpg " alt="">
+                        <label for="content__slide_input-2" class="content__figure_label prevSlide"> </label>
+                        <label for="content__slide_input-4" class="content__figure_label nextSlide"></label>
+                        <figcaption class="content__figure_caption">Рэнди Хетрик</figcaption>
+
+                        <div class = "content__figure_hidden">                            
+                            В 1997 одно из подразделений спецназа ВМС США несло свою службу где-то в недрах Азии.
+                            Бойцам было откровенно скучно и один из них, по имени Рэнди Хетрик, всячески экспериментировал с тренировками.
+                                В одно из своих занятий отвязал пояс от кимоно, закрепил его дверью и стал подтягиваться. Попробовал разные углы, оценил уровень нагрузки и
+                                продолжил эксперименты. Он пришил к поясу что-то типа ручки из парашютной стропы и 
+                            арсенал упражнений увеличился многократно. Это были те же самые упражнения, которые сейчас используются с петлями TRX.
+            
+                        </div>
+                    </figure>
+
+                    
+                    <figure class="content__figure content__figure_block-4">
+                        <img src="img/content_4.jpg " alt="">
+                        <label for="content__slide_input-3" class="content__figure_label prevSlide"> </label>
+                        <label for="content__slide_input-1" class="content__figure_label nextSlide"></label>
+                        <figcaption class="content__figure_caption">Подпись под фото</figcaption>
+                    </figure>
+
+                </div>
+            
+            </div>
+
+            <div class="content__list">
+                <section>
+                <h3>Плюсы TRX</h3>
+                <ul>
+                    <li>+1</li>
+                    <li>+1</li>
+                    <li>+1</li>
+                    <li>+1</li>
+                    <li>+1</li>
+
+                </ul>
+            </section>
+            <section>
+        
+                <h3>Минусы TRX</h3>
+                <ul>
+                    <li>+1</li>
+                    <li>+1</li>
+                    <li>+1</li>
+                    <li>+1</li>
+                    <li>+1</li>
+                    
+                </ul>
+            </section>
+            </div>
+        
+        </section>
+    </main>
+
 </body>
 
 </html>
