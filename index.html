@@ -33,6 +33,8 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            position: fixed;
+            z-index: 20;
         }
 
         .header__header_logo{
@@ -54,6 +56,7 @@
             width: 100%; 
             height: 90vh; 
             position: relative;
+            margin-top: 10vh;
         }
 
         .header__nav_slid {
@@ -293,7 +296,7 @@
                 <div class="header__header_linkCircle" href="#"> 
                     <div>
                         <ul>                            
-                            <li> <a class="header__header_linkPage" href="#">Что такое TRX </a> </li>
+                            <li> <a class="header__header_linkPage" href="#main_content">Что такое TRX </a> </li>
                             <li> <a class="header__header_linkPage" href="#">А теперь поговорим про петли</a> </li>
                             <li> <a class="header__header_linkPage" href="#"> Базовые упражнения trx </a> </li>
                             <li> <a class="header__header_linkPage" href="#">Особенности trx</a> </li>
@@ -314,7 +317,7 @@
                 <img src="img/3.jpg" alt="">
                 <div class='header__nav_text'>
                     <h2> Что такое TRX </h2>
-                    <div class="header__nav_buttonLink"><a href="#">MORE</a>
+                    <div class="header__nav_buttonLink"><a href="#main_content">MORE</a>
                     </div>
                 </div>
                 <label for="slaiderRadio-5" class="header__nav_label prevSlide"></label>
@@ -357,7 +360,7 @@
     </header>
 
 
-    <main class="content">
+    <main class="content" id="main_content">
         <section class="content__page1">
             <div class="content__page1_history">
                 <h3 class="content__page1_caption"> Что такое подвесной тренинг</h3>
@@ -365,20 +368,12 @@
                 Подвесной тренинг — разновидность силового тренинга, при котором
                 используют подвесные системы из веревок или ремней, позволяющих выполнять упражнения, 
                 используя в виде отягощения собственный вес человека.
-                Еще в XIX веке гимнасты и цирковые акробаты тренировались и выступали с подобными штуками. 
-                Этому есть документальные свидетельства. В 1886 году в Нью-Йорке была издана книга “Athletic sports for boys”, 
-                где они подробно описывались.<br>
-                
+               <br> 
         
                 TRX (Total Body Resistance Exercise) – это аббревиатура.
                 Просто эти три буквы стали уже нарицательными и мы так называем все петли для подвесного тренинга.
-                Похожая история произошла с брендами Xerox, Jeep, Aspirin и др.<br>
+                Похожая история произошла с брендами Xerox, Jeep, Aspirin и др.
            
-              
-
-                Чуть позже он ушел в отставку с военной службы и получая экономическое образование, параллельно доводил свое изобретение «до ума».
-                Дизайн и функционал его петли был изменен, по его признанию, не менее полсотни раз. В конце концов, получилось то, что мы сейчас видим в каждом уважающем себя фитнес-клубе.
-         
             </p>
 
           
@@ -390,11 +385,16 @@
 
                     <figure class="content__figure content__figure_block-1">
                         <img src="img/content_1.jpg" alt="Картинка из книги 1886 года">
+                      
                         <label for="content__slide_input-4" class="content__figure_label prevSlide"></label>
                         <label for="content__slide_input-2" class="content__figure_label nextSlide"></label>
                         <figcaption class="content__figure_caption">Иллюстрация из книги 1866 г.<br>«Athletic sports for boys»</figcaption>
                         
-
+                        <div class = "content__figure_hidden">
+                            Еще в XIX веке гимнасты и цирковые акробаты тренировались и выступали с подобными штуками. 
+                            Этому есть документальные свидетельства. В 1886 году в Нью-Йорке была издана книга “Athletic sports for boys”, 
+                            где они подробно описывались.
+                        </div>
                     </figure>
 
                     <figure class="content__figure content__figure_block-2">
@@ -406,8 +406,7 @@
                         <div class = "content__figure_hidden">
                             Методически выверенные техники тренировок с собственным весом были представлены среди акробатов в
                             Древнем Риме и Китае, которые уже тогда славились своими превосходными спортивными качествами. 
-                            Акробаты из Древнего Китая были известны на весь мир как искусные гимнасты.
-
+                            Акробаты из Древнего Китая были известны на весь мир как искусные гимнасты.<br>
                             В 19 веке в воинских подразделениях разных стран начинают разрабатываться методики упражнений с веревками 
                             для подготовки к тяжелым боям и условиям горных экспедиций. Подобные «подвесные» тренировки встречаются и
                             среди первых альпинистов.
@@ -424,8 +423,8 @@
                         <div class = "content__figure_hidden">                            
                             В 1997 одно из подразделений спецназа ВМС США несло свою службу где-то в недрах Азии.
                             Бойцам было откровенно скучно и один из них, по имени Рэнди Хетрик, всячески экспериментировал с тренировками.
-                                В одно из своих занятий отвязал пояс от кимоно, закрепил его дверью и стал подтягиваться. Попробовал разные углы, оценил уровень нагрузки и
-                                продолжил эксперименты. Он пришил к поясу что-то типа ручки из парашютной стропы и 
+                            В одно из своих занятий отвязал пояс от кимоно, закрепил его дверью и стал подтягиваться. Попробовал разные углы, оценил уровень нагрузки и
+                            продолжил эксперименты. Он пришил к поясу что-то типа ручки из парашютной стропы и 
                             арсенал упражнений увеличился многократно. Это были те же самые упражнения, которые сейчас используются с петлями TRX.
             
                         </div>
@@ -436,15 +435,23 @@
                         <img src="img/content_4.jpg " alt="">
                         <label for="content__slide_input-3" class="content__figure_label prevSlide"> </label>
                         <label for="content__slide_input-1" class="content__figure_label nextSlide"></label>
-                        <figcaption class="content__figure_caption">Подпись под фото</figcaption>
+                        <figcaption class="content__figure_caption">  </figcaption>
+                        <div class = "content__figure_hidden">                            
+                            Чуть позже Рэнди Хетрик ушел в отставку с военной службы и получая экономическое образование, параллельно доводил свое изобретение «до ума».
+                            Дизайн и функционал его петли был изменен, по его признанию, не менее полсотни раз. В конце концов, получилось то, что мы сейчас видим в каждом уважающем себя фитнес-клубе.
+            
+                        </div>
                     </figure>
+
+                    
+                 
 
                 </div>
             
             </div>
 
             <div class="content__list">
-                <section>
+                <section class="content__list_plus">
                 <h3>Плюсы TRX</h3>
                 <ul>
                     <li>+1</li>
@@ -455,23 +462,25 @@
 
                 </ul>
             </section>
-            <section>
+
+            <section class="content__list_minus">
         
                 <h3>Минусы TRX</h3>
                 <ul>
-                    <li>+1</li>
-                    <li>+1</li>
-                    <li>+1</li>
-                    <li>+1</li>
-                    <li>+1</li>
+                    <li>дополнительные расходы на установку стационарного крепежа в стену (лучше в потолок);</li>
+                    <li>наличие свободного пространства — по 3-4 шага вперед и в сторону от вертикальной проекции точки крепления на полу;</li>
+                    <li> возможность растяжения связок при неправильной технике выполнения сложных упражнений;</li>
+                    <li>травмирование при падениях, возможных, если были куплены петли с дешевыми соединяющими крепежами;</li>
                     
                 </ul>
             </section>
+
+          
             </div>
         
         </section>
     </main>
-
+  
 </body>
 
 </html>
