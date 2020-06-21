@@ -8,6 +8,8 @@ $contentBackgroundShedow: .2vw .5vw .5vw .1vw rgba(255, 255, 255, .5), .4vw .7vw
 $marginLeftRight: 5vw;
 $spaceBackgroundColor: rgba(184, 162, 38, .7);
 $mainBoxShadow: 0 -.5vw 15px 1px  rgb(27, 27, 26);
+$widthCaption:30vw;
+$heightCaption: 5vw;
 
 
 @font-face{
@@ -17,21 +19,20 @@ $mainBoxShadow: 0 -.5vw 15px 1px  rgb(27, 27, 26);
 
 body>.content {
     margin-bottom: $minMargin;
-    margin-top: 2vh;
     width: calc(100vw - 1.5vw);
     height: $windowHeight;
     padding-top: $minMargin;
     margin: $marginCenter;
-    position: relative;
+    position: relative; 
     font-family: 'Pacifico', cursive;
+    font-size: 1.8vw;
+    
 
     .content__page1 {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
         justify-content: space-evenly;
-        background-color: khaki;
-       
+             
 
         .content__page1_history {
             padding-left: 2vw;
@@ -41,11 +42,8 @@ body>.content {
             box-shadow: 0 0 1vw .5vh black;
             margin-left: $marginLeftRight;
             margin-right: $marginLeftRight;
-            background-color: rgba(184, 162, 38, .7);
-            font-size: 1.6vw;
-         
-
-
+            background-color: $spaceBackgroundColo;
+          
             .content__page1_caption{
             width: 40vw;
             height: 5vw;
@@ -57,9 +55,9 @@ body>.content {
             padding-left: 5vw;
             line-height: 5vw;
             vertical-align: middle;
-            text-transform:uppercase;
-            font-size: 2vw;
+            text-transform:uppercase;          
             box-shadow: $mainBoxShadow;
+            margin-bottom: 4vw;
 
              &::before{
                  content:"";
@@ -131,8 +129,9 @@ body>.content {
 
                     .content__figure_caption {
                         font-size: 1vw;
-                         font-weight: 700;
+                        font-weight: 700;
                         margin-top: 4vw;
+                       
                     }  
                     
                     .content__figure_hidden{
@@ -148,13 +147,11 @@ body>.content {
                         transition: all 1s linear 1s;
                         
                         &:hover{
-                            overflow-y: scroll;
+                           overflow-y: scroll;
                            color: rgb(15, 134, 65)
                         }
                        
                     }
-
-
 
                 }
 
@@ -173,18 +170,173 @@ body>.content {
             margin-top: 2vw;
             display: flex;
             justify-content: space-between;
-
             margin-left: $marginLeftRight;
             margin-right: $marginLeftRight;
           
-
             .content__list_plus,
             .content__list_minus{
-                width: 48%;
+                width: 39vw;
                 outline: 1px solid black;
                 background-color: $spaceBackgroundColor;
                 box-shadow: $mainBoxShadow;
+                position: relative;
+                padding-left:2vw;
+                padding-right:2vw;
+
             }
-        }
-    
+
+           
+                .content__page1_caption{
+                    width: 20vw;
+                    height: $heightCaption;
+                    background-color: gold;
+                    display: inline-block;
+                    position: relative;
+                    margin-bottom: 4vw;
+                    top: 2vw;             
+                    line-height: 5vw;
+                    vertical-align: middle;
+                    text-transform:uppercase;
+                    font-size: 2vw;
+                    box-shadow: $mainBoxShadow;
+                   
+                   
+        
+                     &::before{
+                         content:"";
+                         display: inline-block;
+                         position: absolute;
+                         bottom:-3vw;                                                  
+                         border: 1.5vw solid rgb(255, 168, 7);                        
+                         border-bottom-color: transparent;
+                            }
+        
+                        } 
+
+                        .content__list_plus{
+                            input{
+                                display: none;                              
+
+                            }
+                            .content__list_button{
+                                width: 10vw;
+                                height: 4vw;
+                                display: inline-block;
+                                background-color: rgb(29, 92, 42);
+                                margin: 1vw;
+                                border: 2px solid rgb(255, 168, 7);
+                                border-top-left-radius: 2vw; 
+                                border-top-right-radius: 2vw; 
+                                border-bottom-left-radius: 2vw; 
+                                border-bottom-right-radius: 2vw; 
+                                color:gold;
+                                vertical-align: middle;
+                                line-height: 4vw;
+                                text-align: center;
+                                transition: all .25s ease-in-out .25s;
+                                box-shadow:
+                                0 0 0 1px silver,
+                                0 -20px 0 -10px coral,
+                                20px 0 0 -10px rgb(83, 137, 138),
+                                0 20px 0 -10px rgb(255, 168, 7),
+                                -20px 0 0 -10px   rgba(116, 157, 70, .7);
+
+                               
+
+                           
+                            }
+
+                            .content__list_hidden{
+                                padding: 2vw;
+                                width: 80%;
+                                font-size: 1.5vw;
+                                position:relative;
+                                margin: 0 auto;
+                                box-shadow:0 2px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;                             
+                                display: none; 
+                               
+                                
+                                &::before,
+                                &::after{
+                                    content: "";                                  
+                                    display: inline-block;
+                                    z-index: -5;
+                                    width: 50%;
+                                    height: 30%;
+                                    position: relative;
+                                    bottom: 5vw;
+                                    left: 2vw;
+                                    box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
+                                    transform: rotate(-3deg);
+                                }
+
+                                &::after{
+                                    left: 1vw;
+                                    right: auto;
+                                    transform: rotate(3deg);
+                                }
+                              
+                           }
+                            
+                           @for $q from 1 through 7 {
+                            #radioButton-#{$q}:checked~.content__list_forButton-#{$q}{
+                                display: block;                                 
+                                
+                            }
+
+                            #radioButton-#{$q}:checked~.content__list_button:nth-of-type(#{$q}){
+                                background-color: rgb(128, 44, 44);                                
+                                color: burlywood;
+                            
+                            }
+                                
+                           }
+
+                                                
+                            .content__page1_caption{
+                                left: -5.3vw;
+                                padding-left: 5vw;
+
+                                &::before{
+                                    left:0; 
+                                    border-left-color: transparent;
+                                }                                   
+                                
+                            }
+                        
+                        }
+
+
+                        .content__list_minus{
+
+                            background-image: url('/img/anim.jpg');
+                            background-repeat: no-repeat;
+                            background-size: 150px 150px;
+                            width:30vw;
+
+                            .content__page1_caption{
+                                right: -19.5vw;
+                                padding-left: 5vw;
+
+                                &::before{
+                                    right: 0; 
+                                    border-right-color: transparent;
+                                  
+                                }
+                            }
+
+                        }
+
+            }
+
+       
+            .content__page3{
+                background-color: $spaceBackgroundColor;
+                display: inline-block;
+                width: 50vw;
+                height: 50p;
+                outline: 1px solid red;
+ 
+            }  
+
 }
