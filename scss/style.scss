@@ -42,7 +42,7 @@ body>.content {
             box-shadow: 0 0 1vw .5vh black;
             margin-left: $marginLeftRight;
             margin-right: $marginLeftRight;
-            background-color: $spaceBackgroundColo;
+            background-color: $spaceBackgroundColor;
           
             .content__page1_caption{
             width: 40vw;
@@ -234,14 +234,17 @@ body>.content {
                                 line-height: 4vw;
                                 text-align: center;
                                 transition: all .25s ease-in-out .25s;
-                                box-shadow:
-                                0 0 0 1px silver,
-                                0 -20px 0 -10px coral,
-                                20px 0 0 -10px rgb(83, 137, 138),
-                                0 20px 0 -10px rgb(255, 168, 7),
-                                -20px 0 0 -10px   rgba(116, 157, 70, .7);
+                                // box-shadow:
+                                // 0 0 0 1px silver,
+                                // 0 -20px 0 -10px coral,
+                                // 20px 0 0 -10px rgb(83, 137, 138),
+                                // 0 20px 0 -10px rgb(255, 168, 7),
+                                // -20px 0 0 -10px   rgba(116, 157, 70, .7);
 
-                               
+                                // box-shadow:
+                                // 0 0 0 7px #60B88D,
+                                // 0 0 0 14px #90CDAF,
+                                // 0 0 0 21px #BFE3D1;
 
                            
                             }
@@ -312,7 +315,7 @@ body>.content {
                             background-image: url('/img/anim.jpg');
                             background-repeat: no-repeat;
                             background-size: 150px 150px;
-                            width:30vw;
+                            
 
                             .content__page1_caption{
                                 right: -19.5vw;
@@ -326,17 +329,20 @@ body>.content {
                             }
 
                         }
-
+                      
             }
 
-       
+        
             .content__page3{
+                margin-top: 2vw;
+                margin-left: $marginLeftRight;
+                margin-right: $marginLeftRight;
                 background-color: $spaceBackgroundColor;
                 display: inline-block;
-                width: 50vw;
-                height: 50p;
-                outline: 1px solid red;
+                width: 90vw;
+                height: 100vh;
+                outline: 1px solid black;
  
-            }  
-
+            }   
+          
 }

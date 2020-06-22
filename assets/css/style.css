@@ -214,7 +214,7 @@ body > .content .content__list .content__list_plus input {
 
 body > .content .content__list .content__list_plus .content__list_button {
   width: 10vw;
-  height: 5vw;
+  height: 4vw;
   display: inline-block;
   background-color: #1d5c2a;
   margin: 1vw;
@@ -225,12 +225,10 @@ body > .content .content__list .content__list_plus .content__list_button {
   border-bottom-right-radius: 2vw;
   color: gold;
   vertical-align: middle;
-  line-height: 5vw;
+  line-height: 4vw;
   text-align: center;
   -webkit-transition: all .25s ease-in-out .25s;
   transition: all .25s ease-in-out .25s;
-  -webkit-box-shadow: 0 0 0 1px silver, 0 -20px 0 -10px coral, 20px 0 0 -10px #53898a, 0 20px 0 -10px #ffa807, -20px 0 0 -10px rgba(116, 157, 70, 0.7);
-          box-shadow: 0 0 0 1px silver, 0 -20px 0 -10px coral, 20px 0 0 -10px #53898a, 0 20px 0 -10px #ffa807, -20px 0 0 -10px rgba(116, 157, 70, 0.7);
 }
 
 body > .content .content__list .content__list_plus .content__list_hidden {
@@ -339,6 +337,12 @@ body > .content .content__list .content__list_plus .content__page1_caption::befo
   border-left-color: transparent;
 }
 
+body > .content .content__list .content__list_minus {
+  background-image: url("/img/anim.jpg");
+  background-repeat: no-repeat;
+  background-size: 150px 150px;
+}
+
 body > .content .content__list .content__list_minus .content__page1_caption {
   right: -19.5vw;
   padding-left: 5vw;
@@ -347,5 +351,16 @@ body > .content .content__list .content__list_minus .content__page1_caption {
 body > .content .content__list .content__list_minus .content__page1_caption::before {
   right: 0;
   border-right-color: transparent;
+}
+
+body > .content .content__page3 {
+  margin-top: 2vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  background-color: rgba(184, 162, 38, 0.7);
+  display: inline-block;
+  width: 90vw;
+  height: 100vh;
+  outline: 1px solid black;
 }
 /*# sourceMappingURL=style.css.map */
