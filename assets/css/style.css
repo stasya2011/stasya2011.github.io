@@ -33,7 +33,7 @@ body > .content .content__page1 .content__page1_history {
           box-shadow: 0 0 1vw .5vh black;
   margin-left: 5vw;
   margin-right: 5vw;
-  background-color: rgba(184, 162, 38, 0.7);
+  background-color: rgba(184, 162, 38, 0.4);
 }
 
 body > .content .content__page1 .content__page1_history .content__page1_caption {
@@ -175,7 +175,7 @@ body > .content .content__list .content__list_plus,
 body > .content .content__list .content__list_minus {
   width: 39vw;
   outline: 1px solid black;
-  background-color: rgba(184, 162, 38, 0.7);
+  background-color: rgba(184, 162, 38, 0.4);
   -webkit-box-shadow: 0 -0.5vw 15px 1px #1b1b1a;
           box-shadow: 0 -0.5vw 15px 1px #1b1b1a;
   position: relative;
@@ -357,10 +357,16 @@ body > .content .content__page3 {
   margin-top: 2vw;
   margin-left: 5vw;
   margin-right: 5vw;
-  background-color: rgba(184, 162, 38, 0.7);
-  display: inline-block;
-  width: 90vw;
+  padding: 2vw;
+  background-color: rgba(184, 162, 38, 0.4);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  width: 84vw;
   height: 100vh;
   outline: 1px solid black;
+  -webkit-box-shadow: 0 -0.5vw 15px 1px #1b1b1a;
+          box-shadow: 0 -0.5vw 15px 1px #1b1b1a;
 }
 /*# sourceMappingURL=style.css.map */

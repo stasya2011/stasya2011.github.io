@@ -6,7 +6,7 @@ $marginCenter: 0 auto;
 $contentWidthImg: 20vw;
 $contentBackgroundShedow: .2vw .5vw .5vw .1vw rgba(255, 255, 255, .5), .4vw .7vw 7px 10px rgba(76, 72, 72, .4);
 $marginLeftRight: 5vw;
-$spaceBackgroundColor: rgba(184, 162, 38, .7);
+$spaceBackgroundColor: rgba(184, 162, 38, .4);
 $mainBoxShadow: 0 -.5vw 15px 1px  rgb(27, 27, 26);
 $widthCaption:30vw;
 $heightCaption: 5vw;
@@ -185,6 +185,8 @@ body>.content {
 
             }
 
+            
+
            
                 .content__page1_caption{
                     width: 20vw;
@@ -337,11 +339,14 @@ body>.content {
                 margin-top: 2vw;
                 margin-left: $marginLeftRight;
                 margin-right: $marginLeftRight;
+                padding: 2vw;
                 background-color: $spaceBackgroundColor;
-                display: inline-block;
-                width: 90vw;
+                display: grid;
+                grid-template-columns: 1fr;
+                width: 84vw;
                 height: 100vh;
                 outline: 1px solid black;
+                box-shadow: $mainBoxShadow;
  
             }   
           
