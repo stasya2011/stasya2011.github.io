@@ -8,17 +8,13 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
     <style>
-        body {
-            margin: 0;
-            font-family: sans-serif;
-            background-color: rgb(233, 229, 195);
-        }
-
+       
         .header {
-            width: calc(100vw - 1.5vw);
+            /* width: calc(100vw - 1.5vw); */
             height: 100vh;
             position: relative;
             margin: 0 auto;
+         
         }
 
         .header__header {
@@ -34,7 +30,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            position: fixed;
+            position: relative;
             z-index: 20;
         }
 
@@ -49,20 +45,20 @@
 
         .header__nav {
             width: calc(100%);
+            
 
         }
-
 
         .header>.header__nav>.header__nav_slid img {
             width: 100%;
             height: 90vh;
             position: relative;
-            margin-top: 10vh;
+            /* margin-top: 10vh; */
         }
 
         .header__nav_slid {
             display: none;
-            width: calc(100%);
+           
             position: relative;
         }
 
@@ -76,13 +72,11 @@
             width: 100%;
         }
 
-
         .header__nav_label::before {
             position: absolute;
             content: "";
             border: 20px solid rgba(230, 226, 12, 0.5);
             display: inline-block;
-
             border-top-color: transparent;
             border-bottom-color: transparent;
         }
@@ -111,8 +105,9 @@
             border: 2px solid rgba(80, 76, 76, 0.5);
             box-shadow: 0 0 5pxrgba(80, 76, 76, 0.5) 1px black;
             border-radius: 50%;
-            position: relative;
-
+            position: fixed;
+            top: 1vh;
+            right: 5vw;
 
         }
 
@@ -156,12 +151,18 @@
             color: rgb(36, 37, 26);
             z-index: 2;
             font-size: 1.8vw;
-            width: 30vw;
+            width: 25vw;
         }
 
 
         .header__header_menu>.header__header_linkCircle>div>ul a {
             text-decoration: none;
+            transition: all .5s ease-in-out .5s;
+        }
+
+        .header__header_menu>.header__header_linkCircle>div>ul a:hover{
+            color:orange;
+            
         }
 
         .header__header_menu>.header__header_linkCircle>div>ul li {
@@ -169,11 +170,15 @@
             height: 10vh;
             margin-left: -5%;
             margin-top: 5%;
-            background-color: rgba(76, 155, 155, 0.5);
-            box-shadow: 0 0.5vw .5vw black;
-            border-radius: 5vh;
             list-style: none;
+            transition: all .5s ease-in-out .5s;
+            
 
+        }
+        .header__header_menu>.header__header_linkCircle>div>ul li:hover{
+            transform: translateX(50px);
+            
+            box-shadow: .5vw 0 1vw .1vw rgb(15, 14, 14);
         }
 
         .header__header_menu>.header__header_linkCircle>div>ul li:nth-last-child(1) {
@@ -184,9 +189,13 @@
             width: 100%;
             height: 10vh;
             line-height: 10vh;
-            padding-left: 2vw;
+            padding-left: 1vw;
             vertical-align: middle;
             color: rgb(240, 240, 20);
+        }
+
+        .header__header_menu>.header__header_linkCircle>div>ul a:hover {
+            list-style-type: circle;
         }
 
         /*при наведении на меню - открывается меню*/
@@ -200,7 +209,6 @@
             right: -3vw;
 
         }
-
 
         .header__header_menu>.header__header_linkCircle:hover div {
             background-color: transparent;
@@ -226,17 +234,24 @@
 
         .header__nav .header__nav_slid .header__nav_text {
             position: absolute;
-            top: calc(50% - 5vw);
-            left: calc(50% - 12vw);
+            bottom: 5vw;
+
             font-size: 3vw;
+            outline: 1px solid red;
+            /* margin-left: 2vw; */
         }
 
-        .header__nav .header__nav_slid .header__nav_text h2 {
-            margin: 0;
-            color: rgb(255, 29, 153);
+        /* .header__nav .header__nav_slid .header__nav_text h2 {
+            
+            
+        } */
+
+        .header__nav .header__nav_slid .header__nav_text h2 a {
+            text-decoration: none;
+            
         }
 
-        .header__nav .header__nav_slid .header__nav_text>.header__nav_buttonLink {
+        /* .header__nav .header__nav_slid .header__nav_text>.header__nav_buttonLink {
             position: absolute;
             top: 5vw;
             left: 20%;
@@ -247,11 +262,11 @@
             line-height: 6vw;
             text-align: center;
             border: 5px solid rgb(85, 131, 44);
-            
+
             border-radius: 5vw;
             /* background-color: rgba(112, 158, 72, .5); */
 
-            animation-name: bottonLink;
+             /* animation-name: bottonLink;
             animation-delay: 2s;
             animation-duration: 1.2s;
             animation-direction: alternate;
@@ -267,19 +282,17 @@
         @keyframes bottonLink {
             0% {
                 transform: translateY(0);
-
             }
 
             50% {
                 transform: translateY(-1vw);
                 transform: scale(1.1);
-
             }
 
             100% {
                 transform: translateY(0);
             }
-        }
+        } */
 
         .header {
             margin-bottom: 1vw;
@@ -297,7 +310,7 @@
                         <ul>
                             <li> <a class="header__header_linkPage" href="#main_content">Что такое TRX </a> </li>
                             <li> <a class="header__header_linkPage" href="#">Плюсы/минусы TRX</a> </li>
-                            <li> <a class="header__header_linkPage" href="#"> Базовые упражнения trx </a> </li>
+                            <li> <a class="header__header_linkPage" href="#page3"> Базовые упражнения TRX </a> </li>
                             <li> <a class="header__header_linkPage" href="#">Особенности trx</a> </li>
                         </ul>
                     </div>
@@ -315,16 +328,16 @@
             <section class="header__nav_slid header__nav_number-1">
                 <img src="img/3.jpg" alt="">
                 <div class='header__nav_text'>
-                    <h2> Что такое TRX </h2>
-                    <div class="header__nav_buttonLink"><a href="#main_content">MORE</a>
-                    </div>
+                    <h2> <a href="#main_content">Что такое TRX</a> </h2>
+                    <!-- <div class="header__nav_buttonLink"><a href="#main_content">MORE</a>
+                    </div> -->
                 </div>
                 <label for="slaiderRadio-5" class="header__nav_label prevSlide"></label>
                 <label for="slaiderRadio-2" class="header__nav_label nextSlide"></label>
             </section>
             <section class="header__nav_slid header__nav_number-2">
-                <img src="img/img_11.jpg" alt="">
-                <h2> Что такое TRX </h2>
+                <img src="img/img4.jpg" alt="">
+                <h2><a href="#">Что такое TRX</a> </h2>
                 <div class="header__nav_buttonLink"><a href="#">MORE</a>
                 </div>
                 </div>
@@ -333,8 +346,8 @@
             </section>
             <section class="header__nav_slid header__nav_number-3">
                 <img src="img/5.jpg" alt="">
-                <h2> Плюсы/минусы TRX </h2>
-                <div class="header__nav_buttonLink"><a href="#">MORE</a>
+                <h2><a href="#"> Плюсы/минусы TRX </a></h2>
+                <!-- <div class="header__nav_buttonLink"><a href="#">MORE</a> -->
                 </div>
                 <label for="slaiderRadio-2" class="header__nav_label prevSlide"></label>
                 <label for="slaiderRadio-4" class="header__nav_label nextSlide"></label>
@@ -342,15 +355,15 @@
             <section class="header__nav_slid header__nav_number-4">
                 <img src="img/image22.jpg" alt="">
                 <h2> Что такое подвесной тренинг</h2>
-                <div class="header__nav_buttonLink"><a href="#">MORE</a>
+                <!-- <div class="header__nav_buttonLink"><a href="#">MORE</a> -->
                 </div>
                 <label for="slaiderRadio-3" class="header__nav_label prevSlide"></label>
                 <label for="slaiderRadio-5" class="header__nav_label nextSlide"></label>
             </section>
             <section class="header__nav_slid header__nav_number-5">
-                <img src="img/photo-.jpg" alt="">
-                <h2> Что такое TRX </h2>
-                <div class="header__nav_buttonLink"><a href="#">MORE</a>
+                <img src="img/5.jpg" alt="">
+                <h2><a href="#"> Что такое TRX </a></h2>
+                <!-- <div class="header__nav_buttonLink"><a href="#">MORE</a> -->
                 </div>
                 <label for="slaiderRadio-4" class="header__nav_label prevSlide"></label>
                 <label for="slaiderRadio-1" class="header__nav_label nextSlide"></label>
@@ -438,7 +451,6 @@
                         </div>
                     </figure>
 
-
                     <figure class="content__figure content__figure_block-4">
                         <img src="img/content_4.jpg " alt="">
                         <label for="content__slide_input-3" class="content__figure_label prevSlide"> </label>
@@ -449,13 +461,8 @@
                             образование, параллельно доводил свое изобретение «до ума».
                             Дизайн и функционал его петли был изменен, по его признанию, не менее полсотни раз. В конце
                             концов, получилось то, что мы сейчас видим в каждом уважающем себя фитнес-клубе.
-
                         </div>
                     </figure>
-
-                    
-
-
                 </div>
 
             </div>
@@ -463,6 +470,9 @@
         </section>
 
         <div class="content__list">
+
+            
+
             <section class="content__list_plus">
                 <h3 class="content__page1_caption">Плюсы TRX</h3>
                 <ol>
@@ -535,31 +545,84 @@
                 </ol>
             </section>
 
-            <section class="content__list_minus"">
+            <section class="content__list_minus">
 
-                <h3 class="content__page1_caption">Минусы TRX</h3>
+                <h3 class=" content__page1_caption">Минусы TRX</h3>
                 <ol>
-                    <li>Дополнительные расходы на установку стационарного крепежа в стену (лучше в потолок);</li>
+                    <li>Дополнительные расходы на установку стационарного крепежа в стену (лучше в потолок).</li>
 
                     <li>Наличие свободного пространства — по 3-4 шага вперед и в сторону от вертикальной проекции точки
-                        крепления на полу;</li>
+                        крепления на полу.</li>
 
-                    <li> Возможность растяжения связок при неправильной технике выполнения сложных упражнений;</li>
+                    <li> Возможность растяжения связок при неправильной технике выполнения сложных упражнений.</li>
 
                     <li>Травмирование при падениях, возможных, если были куплены петли с дешевыми соединяющими
-                        крепежами;</li>
+                        крепежами.</li>
 
                 </ol>
             </section>
 
         </div>
 
-        <section class="content__page3">
-            <!-- <video>
-                <source src="">
-            </video> -->
+        <section class="content__page3" id="page3">
+            <h3 class="content__page1_caption">Базовые упражнения TRX</h3>
+                <div class="content__generalWrapper">
+
+                    <article id="sliderGeneral">
+                        <input checked type="radio" name="sliderPage3" id="switch1">
+                        <input type="radio" name="sliderPage3" id="switch2">
+                        <input type="radio" name="sliderPage3" id="switch3">
+                        <input type="radio" name="sliderPage3" id="switch4">
+                        <input type="radio" name="sliderPage3" id="switch5">
+                        <div id="slides">
+                            <div id="overflow">
+                                <div class="image">
+                                    <article> <iframe width="560" height="315"
+                                            src="https://www.youtube.com/embed/Gagl23KZs0U" frameborder="0"
+                                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen> </iframe></article>
+                                    <article><iframe width="560" height="315"
+                                            src="https://www.youtube.com/embed/UQGIV4QzIdU" frameborder="0"
+                                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe></article>
+                                    <article><iframe width="560" height="315"
+                                            src="https://www.youtube.com/embed/-3PjU3l7qnA" frameborder="0"
+                                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe></article>
+                                    <article><iframe width="560" height="315"
+                                            src="https://www.youtube.com/embed/xJpH14sML-M" frameborder="0"
+                                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe></article>
+                                    <article><iframe width="560" height="315"
+                                            src="https://www.youtube.com/embed/M-Y1SHmUdeI" frameborder="0"
+                                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe></article>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="controls">
+                            <label for="switch1"></label>
+                            <label for="switch2"></label>
+                            <label for="switch3"></label>
+                            <label for="switch4"></label>
+                            <label for="switch5"></label>
+                        </div>
+                        <div id="active">
+                            <label for="switch1"></label>
+                            <label for="switch2"></label>
+                            <label for="switch3"></label>
+                            <label for="switch4"></label>
+                            <label for="switch5"></label>
+                        </div>
+                    </article>
         </section>
     </main>
+
+    <footer class="footer">
+        <div class="footer__items">
+            
+        </div>
+    </footer>
 
 </body>
 
