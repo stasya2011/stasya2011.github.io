@@ -220,12 +220,15 @@ body .content .content__list .content__list_plus .content__list_style {
   display: inline-block;
   width: 5vw;
   height: 5vw;
-  outline: 1px solid red;
+  position: relative;
+  top: 3vw;
+  right: -1vw;
+  display: inline-block;
   background-image: url("/img/sprite.png");
   background-size: 200px 150px;
   background-repeat: no-repeat;
   background-position: -10vw -7vw;
-  margin-top: 2vw;
+  display: none;
 }
 
 body .content .content__list .content__list_plus input {
@@ -284,7 +287,8 @@ body .content .content__list .content__list_plus .content__list_hidden::after {
           transform: rotate(3deg);
 }
 
-body .content .content__list .content__list_plus #radioButton-1:checked ~ .content__list_forButton-1 {
+body .content .content__list .content__list_plus #radioButton-1:checked ~ .content__list_forButton-1,
+body .content .content__list .content__list_plus #radioButton-1:checked ~ .content__list_style:nth-of-type(1) {
   display: block;
 }
 
@@ -293,7 +297,8 @@ body .content .content__list .content__list_plus #radioButton-1:checked ~ .conte
           box-shadow: inset 0 1px 10px rgba(6, 82, 35, 0.5), 0 1px #262829, 0 0 1px #56606a;
 }
 
-body .content .content__list .content__list_plus #radioButton-2:checked ~ .content__list_forButton-2 {
+body .content .content__list .content__list_plus #radioButton-2:checked ~ .content__list_forButton-2,
+body .content .content__list .content__list_plus #radioButton-2:checked ~ .content__list_style:nth-of-type(2) {
   display: block;
 }
 
@@ -302,7 +307,8 @@ body .content .content__list .content__list_plus #radioButton-2:checked ~ .conte
           box-shadow: inset 0 1px 10px rgba(6, 82, 35, 0.5), 0 1px #262829, 0 0 1px #56606a;
 }
 
-body .content .content__list .content__list_plus #radioButton-3:checked ~ .content__list_forButton-3 {
+body .content .content__list .content__list_plus #radioButton-3:checked ~ .content__list_forButton-3,
+body .content .content__list .content__list_plus #radioButton-3:checked ~ .content__list_style:nth-of-type(3) {
   display: block;
 }
 
@@ -311,7 +317,8 @@ body .content .content__list .content__list_plus #radioButton-3:checked ~ .conte
           box-shadow: inset 0 1px 10px rgba(6, 82, 35, 0.5), 0 1px #262829, 0 0 1px #56606a;
 }
 
-body .content .content__list .content__list_plus #radioButton-4:checked ~ .content__list_forButton-4 {
+body .content .content__list .content__list_plus #radioButton-4:checked ~ .content__list_forButton-4,
+body .content .content__list .content__list_plus #radioButton-4:checked ~ .content__list_style:nth-of-type(4) {
   display: block;
 }
 
@@ -320,7 +327,8 @@ body .content .content__list .content__list_plus #radioButton-4:checked ~ .conte
           box-shadow: inset 0 1px 10px rgba(6, 82, 35, 0.5), 0 1px #262829, 0 0 1px #56606a;
 }
 
-body .content .content__list .content__list_plus #radioButton-5:checked ~ .content__list_forButton-5 {
+body .content .content__list .content__list_plus #radioButton-5:checked ~ .content__list_forButton-5,
+body .content .content__list .content__list_plus #radioButton-5:checked ~ .content__list_style:nth-of-type(5) {
   display: block;
 }
 
@@ -329,7 +337,8 @@ body .content .content__list .content__list_plus #radioButton-5:checked ~ .conte
           box-shadow: inset 0 1px 10px rgba(6, 82, 35, 0.5), 0 1px #262829, 0 0 1px #56606a;
 }
 
-body .content .content__list .content__list_plus #radioButton-6:checked ~ .content__list_forButton-6 {
+body .content .content__list .content__list_plus #radioButton-6:checked ~ .content__list_forButton-6,
+body .content .content__list .content__list_plus #radioButton-6:checked ~ .content__list_style:nth-of-type(6) {
   display: block;
 }
 
@@ -338,7 +347,8 @@ body .content .content__list .content__list_plus #radioButton-6:checked ~ .conte
           box-shadow: inset 0 1px 10px rgba(6, 82, 35, 0.5), 0 1px #262829, 0 0 1px #56606a;
 }
 
-body .content .content__list .content__list_plus #radioButton-7:checked ~ .content__list_forButton-7 {
+body .content .content__list .content__list_plus #radioButton-7:checked ~ .content__list_forButton-7,
+body .content .content__list .content__list_plus #radioButton-7:checked ~ .content__list_style:nth-of-type(7) {
   display: block;
 }
 
