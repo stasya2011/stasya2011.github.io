@@ -293,6 +293,100 @@
         .header {
             margin-bottom: 1vw;
         }
+
+
+
+    
+            @media screen and (min-width: 700px)and (max-width: 1000px)
+            {
+               body>header{
+                margin-bottom: .5vw;
+                }
+
+              
+
+                .content__page1_caption{
+                        left: 5.3vw;
+                        margin-left: 12vw;
+                    }
+
+                .content__list_minus .content__page1_caption{
+                    left:-5vw;
+                }
+
+               
+                body>.content>.content__list .content__list_minus .content__page1_caption::after{
+                        content:"";
+                        display: inline-block;
+                        position: absolute;
+                        bottom:-3vw;
+                        right: -7vw;                           
+                        border-top: 2.5vw solid gold;
+                        border-bottom: 2.5vw solid gold;
+                        border-right: 5vw solid gold;
+                        border-left: 5vw solid gold;
+                        z-index: -10;
+                        border-right-color: transparent;                       
+                        box-shadow: -3vw 2px 25px 0 grey;
+                     }
+                     
+                        .content__list{
+                        margin-left: 0;
+                        margin-right: 0; 
+                        }  
+                    
+                        body>.footer{
+                        margin-left: .5vw;  
+                        margin-right: .5vw;
+                        margin-bottom: .5vw;
+                        }
+
+                        body>.content>.content__page1 .content__page1_history{
+                        margin-left: .5vw;
+                        margin-right: .5vw;
+                    
+                    
+                        }
+                    
+                        body>.content>.content__list{
+                            margin-left: 0.5vw;
+                            margin-right: 0.5vw;
+                        }
+
+                        body>.content>.content__list .content__list_plus,
+                        body>.content>.content__list  .content__list_minus{
+                    width: 45vw;                
+                  
+                    }
+                    
+                    body>.content>.content__page1 .content__page1_caption::after,
+                    body>.content .content__page3 .content__page1_caption::after,
+                    body>.content>.content__list .content__list_plus>.content__page1_caption::after{
+                   
+                        content:"";
+                        display: inline-block;
+                        position: absolute;
+                        bottom:-3vw;
+                        left: -7vw;                           
+                        border-top: 2.5vw solid gold;
+                        border-bottom: 2.5vw solid gold;
+                        border-right: 5vw solid gold;
+                        border-left: 5vw solid gold;
+                        z-index: -10;
+                        border-left-color: transparent;                       
+                        box-shadow: 3vw -2px 25px 0 grey;
+                        
+                    }
+
+                    body>.content .content__page3{
+                        margin-left: 0.5vw;
+                            margin-right: 0.5vw;
+                            width: 95vw;
+                    }
+
+                   
+                        
+        }
     </style>
 </head>
 
@@ -325,8 +419,8 @@
                 <img src="img/3.jpg" alt="">
                 <div class='header__nav_text'>
                     <h2> <a href="#main_content">Что такое TRX</a> </h2>
-                    <div class="header__nav_buttonLink"><a href="#main_content">MORE</a>
-                    </div>
+                    <!-- <div class="header__nav_buttonLink"><a href="#main_content">MORE</a>
+                    </div> -->
                 </div>
                 <label for="slaiderRadio-5" class="header__nav_label prevSlide"></label>
                 <label for="slaiderRadio-2" class="header__nav_label nextSlide"></label>
@@ -363,7 +457,7 @@
                 <img src="img/5.jpg" alt="">
                 <div class='header__nav_text'>
                 <h2><a href="#"> Что такое TRX </a></h2>
-                <!-- <div class="header__nav_buttonLink"><a href="#">MORE</a> --></div>
+                <div class="header__nav_buttonLink"><a href="#">MORE</a></div>
                 </div>
                 <label for="slaiderRadio-4" class="header__nav_label prevSlide"></label>
                 <label for="slaiderRadio-1" class="header__nav_label nextSlide"></label>
@@ -469,9 +563,7 @@
 
         </section>
 
-        <div class="content__list">
-
-            
+        <div class="content__list">            
 
             <section class="content__list_plus">
                 <h3 class="content__page1_caption">Плюсы TRX</h3>

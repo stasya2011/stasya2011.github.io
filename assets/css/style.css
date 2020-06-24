@@ -17,7 +17,6 @@ body {
 
 body .content {
   margin-bottom: 1vw;
-  width: calc(100vw - 1.5vw);
   padding-top: 1vw;
   margin: 0 auto;
   position: relative;
@@ -517,6 +516,7 @@ body .footer {
   height: 10vh;
   margin-left: 5vw;
   margin-right: 5vw;
+  margin-bottom: .5vw;
   background-image: -webkit-gradient(linear, right top, left top, from(#a9ad64), color-stop(#a3a85c), color-stop(#9da455), color-stop(#0a0a07), color-stop(#909b46), color-stop(#8a963e), color-stop(#869740), color-stop(#819941), color-stop(#7d9a43), color-stop(#799b45), color-stop(#749d46), to(#709e48));
   background-image: linear-gradient(to left, #a9ad64, #a3a85c, #9da455, #0a0a07, #909b46, #8a963e, #869740, #819941, #7d9a43, #799b45, #749d46, #709e48);
   -webkit-box-shadow: inset 0 5px 10px 2px black, 0 5px 10px 2px #222020, 0 -5px 10px 2px #222020;
@@ -528,31 +528,7 @@ body .footer .footer__items {
   height: 100px;
   display: inline-block;
   background-image: url("/img/sprite.png");
-  background-size: 50px 50px;
+  background-size: 50px 15px;
   background-repeat: no-repeat;
-}
-
-@media screen and (min-width: 700px) and (max-width: 1000px) {
-  body main .content__page1_history {
-    margin-left: .5vw;
-    margin-right: .5vw;
-    width: 95vw;
-  }
-  body main .content__page1_history .content__page1_caption {
-    left: 5.3vw;
-    padding-right: 5vw;
-  }
-  body main .content__page1_history .content__page1_caption::before {
-    display: none;
-    border: 0 solid black;
-  }
-  body main .content__page1_history .content__page1_caption::after {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    bottom: -3vw;
-    right: 0;
-    border: 3vw solid #ffa807;
-  }
 }
 /*# sourceMappingURL=style.css.map */
