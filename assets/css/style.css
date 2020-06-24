@@ -216,6 +216,18 @@ body .content .content__list .content__page1_caption::before {
   border-bottom-color: transparent;
 }
 
+body .content .content__list .content__list_plus .content__list_style {
+  display: inline-block;
+  width: 5vw;
+  height: 5vw;
+  outline: 1px solid red;
+  background-image: url("/img/sprite.png");
+  background-size: 200px 150px;
+  background-repeat: no-repeat;
+  background-position: -10vw -7vw;
+  margin-top: 2vw;
+}
+
 body .content .content__list .content__list_plus input {
   display: none;
 }
@@ -225,7 +237,7 @@ body .content .content__list .content__list_plus .content__list_button {
   height: 4vw;
   display: inline-block;
   margin: 1vw;
-  border: 1w solid #cfae71;
+  border: 1w solid #cf8f71;
   border-top-left-radius: 2vw;
   border-top-right-radius: 2vw;
   border-bottom-left-radius: 2vw;
@@ -524,11 +536,8 @@ body .footer {
 }
 
 body .footer .footer__items {
-  width: 100px;
-  height: 100px;
+  width: 8vw;
+  height: 8vw;
   display: inline-block;
-  background-image: url("/img/sprite.png");
-  background-size: 50px 15px;
-  background-repeat: no-repeat;
 }
 /*# sourceMappingURL=style.css.map */
