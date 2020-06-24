@@ -14,7 +14,12 @@ $heightCaption: 5vw;
 
 @font-face{
     font-family: Pattaya;
-    src: url("fonts/pattaya-regular.ttf");
+    src: url("/fonts/pattaya-regular.ttf");
+}
+
+@font-face{
+    font-family: ALEX BRUSH;
+    src: url("/fonts/AlexBrush-Regular.ttf");
 }
 
 body{
@@ -35,8 +40,7 @@ body{
         font-size: 1.8vw;
         
 
-        .content__page1 {
-           
+        .content__page1 {           
             display: grid;
             grid-template-columns: 1fr;
             justify-content: space-evenly;
@@ -45,9 +49,8 @@ body{
             .content__page1_history {
                 padding-left: 2vw;
                 padding-right: 2vw;
-                position: relative;
-                
-                box-shadow: 0 0 1vw .5vh black;
+                position: relative;                
+                box-shadow: $mainBoxShadow;
                 margin-left: $marginLeftRight;
                 margin-right: $marginLeftRight;
                 background-color: $spaceBackgroundColor;
@@ -193,9 +196,6 @@ body{
 
                 }
 
-                
-
-            
                     .content__page1_caption{
                         width: 20vw;
                         height: $heightCaption;
@@ -514,5 +514,38 @@ body{
            background-size: 50px 50px;
            background-repeat: no-repeat;
        }
-    }    
+    } 
+    
+    @media screen and (min-width: 700px)and (max-width: 1000px ){
+        
+        
+       main{
+           .content__page1_history
+        {
+          margin-left: .5vw;
+          margin-right: .5vw;
+          width:95vw;
+
+          .content__page1_caption{
+            left: 5.3vw;
+            padding-right: 5vw;
+            &::before{
+                display:none;
+                border: 0 solid transparentize($color: #000000, $amount: 0);
+            }
+            &::after{
+                content:"";
+                display: inline-block;
+                position: absolute;
+                bottom:-3vw;
+                right:0;                           
+                border: 3vw solid rgb(255, 168, 7);
+                // border-left-color: transparent;
+                // border-bottom-color: transparent;
+            } 
+          }
+        }
+        
+    }
+    }
 }

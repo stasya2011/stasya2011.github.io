@@ -1,7 +1,12 @@
 @charset "UTF-8";
 @font-face {
   font-family: Pattaya;
-  src: url("fonts/pattaya-regular.ttf");
+  src: url("/fonts/pattaya-regular.ttf");
+}
+
+@font-face {
+  font-family: ALEX BRUSH;
+  src: url("/fonts/AlexBrush-Regular.ttf");
 }
 
 body {
@@ -34,8 +39,8 @@ body .content .content__page1 .content__page1_history {
   padding-left: 2vw;
   padding-right: 2vw;
   position: relative;
-  -webkit-box-shadow: 0 0 1vw .5vh black;
-          box-shadow: 0 0 1vw .5vh black;
+  -webkit-box-shadow: 0 -0.5vw 15px 1px #1b1b1a;
+          box-shadow: 0 -0.5vw 15px 1px #1b1b1a;
   margin-left: 5vw;
   margin-right: 5vw;
   background-color: rgba(184, 162, 38, 0.4);
@@ -525,5 +530,29 @@ body .footer .footer__items {
   background-image: url("/img/sprite.png");
   background-size: 50px 50px;
   background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 700px) and (max-width: 1000px) {
+  body main .content__page1_history {
+    margin-left: .5vw;
+    margin-right: .5vw;
+    width: 95vw;
+  }
+  body main .content__page1_history .content__page1_caption {
+    left: 5.3vw;
+    padding-right: 5vw;
+  }
+  body main .content__page1_history .content__page1_caption::before {
+    display: none;
+    border: 0 solid black;
+  }
+  body main .content__page1_history .content__page1_caption::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    bottom: -3vw;
+    right: 0;
+    border: 3vw solid #ffa807;
+  }
 }
 /*# sourceMappingURL=style.css.map */
