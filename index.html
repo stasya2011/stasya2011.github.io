@@ -11,7 +11,7 @@
        
         .header {
             /* width: calc(100vw - 1.5vw); */
-            height: 100vh;
+            max-height: 100vh;
             position: relative;
             margin: 0 auto;
          
@@ -19,7 +19,7 @@
 
         .header__header {
             width: calc(100% - 6vw);
-            height: 10vh;
+            max-height: 10vh;
             background-image: linear-gradient(to left, rgb(169, 173, 100), rgb(163, 168, 92), rgb(157, 164, 85),
                     rgb(150, 159, 77), rgb(144, 155, 70), rgb(138, 150, 62), rgb(134, 151, 64), rgb(129, 153, 65),
                     rgb(125, 154, 67), rgb(121, 155, 69), rgb(116, 157, 70), rgb(112, 158, 72));
@@ -36,7 +36,7 @@
 
         .header__header_logo {
             text-shadow: 0 0 10px rgb(35, 37, 35);
-            font-size: 2em;
+            font-size: 1.5em;
         }
 
         .header__header_menu {
@@ -50,7 +50,7 @@
 
         .header>.header__nav>.header__nav_slid img {
             width: 100%;
-            height: 90vh;
+            max-height: 90vh;
             position: relative;
            
         }
@@ -80,17 +80,45 @@
             border-bottom-color: transparent;
         }
 
+      
+       
+
         .prevSlide::before {
             border-left-color: transparent;
             left: 5vw;
             top: 40%;
 
+          
+            animation-name: bottonLink;
+            animation-delay: 2s;
+            animation-duration: 1.2s;
+            animation-direction: alternate;
+            animation-timing-function: ease-out;
+            animation-iteration-count: infinite;
+        }
+
+        .prevSlide:hover{
+            cursor: pointer;
+          
         }
 
         .nextSlide::before {
             border-right-color: transparent;
             right: 5vw;
             top: 40%;
+
+            animation-name: bottonLink;
+            animation-delay: 2s;
+            animation-duration: 1.2s;
+            animation-direction: alternate;
+            animation-timing-function: ease-out;
+            animation-iteration-count: infinite;
+           
+        }
+
+        .nextSlide:hover{
+            
+            animation-play-state: paused;
         }
 
         .header input {
@@ -108,6 +136,18 @@
             top: 1vh;
             right: 5vw;
 
+            animation-name: bottonLink;
+            animation-delay: 2s;
+            animation-duration: 1.2s;
+            animation-direction: alternate;
+            animation-timing-function: ease-out;
+            animation-iteration-count: infinite;
+
+        }
+
+        .header__header_menu>.header__header_linkCircle:hover{
+            animation-play-state: paused;
+            cursor: pointer;
         }
 
         .header__header_menu>.header__header_linkCircle div {
@@ -117,6 +157,8 @@
             position: absolute;
             top: calc(50% - 0.25vh);
             left: calc(3vh / 2);
+
+           
 
         }
 
@@ -149,7 +191,7 @@
                     rgba(112, 158, 72, .7));
             color: rgb(36, 37, 26);
             z-index: 2;
-            font-size: 1.8vw;
+            /* font-size: 1.8vw; */
             width: 25vw;
         }
 
@@ -235,7 +277,7 @@
                {
             position: absolute;
             bottom: 5vw;
-            font-size: 2em;
+            /* font-size: 2em; */
             margin-left: 2vw;            
             font-family: ALEX BRUSH, Pattaya;
           
@@ -262,12 +304,7 @@
 
             border-radius: 1vw;
             background-color: rgba(112, 158, 72, .5);
-            animation-name: bottonLink;
-            animation-delay: 2s;
-            animation-duration: 1.2s;
-            animation-direction: alternate;
-            animation-timing-function: ease-out;
-            animation-iteration-count: infinite;
+        
 
         }
 
@@ -389,13 +426,19 @@
 
 
         @media screen and (min-width: 300px)and (max-width: 699px)
-            {
+            {   
+
+                body *{
+                    font-size: 2vw;
+                }
                body>header{
                 margin-bottom: .5vw;
 
                 }
 
-                .content{
+                .content,
+             
+                .content__page1_history{
                     font-size: 3vw;
                 }
                 .content__page1_caption{
@@ -403,7 +446,10 @@
                         margin-left: 12vw;
                        
                     }
-
+                
+                    .content__list .content__list_hidden{
+                        font-size: 10vw;
+                    }    
                 .content__list_minus .content__page1_caption{
                     left:-5vw;
                 }
@@ -435,8 +481,7 @@
 
                         body>.content>.content__page1 .content__page1_history{
                         margin-left: .5vw;
-                        margin-right: .5vw;
-                    
+                        margin-right: .5vw;                    
                     
                         }
                     
@@ -447,8 +492,8 @@
                             justify-content: center;
                             grid-template-columns: 1fr;
                             grid-template-rows: 2fr;
-                            margin-left: 0;
-                            margin-right: 0; 
+                            margin-left: 0.5vw;
+                            margin-right: 0.5vw; 
 
                             font-size: 5vw;
                         }
@@ -459,10 +504,11 @@
 
                         body>.content>.content__list .content__list_plus,
                         body>.content>.content__list  .content__list_minus{
-                        width: 98vw; 
+                        width: 94vw; 
                         margin-top: 1vw;
                         margin-bottom: 1vw;               
-                  
+                        margin-left: .5vw;
+                        margin-right: .5vw;
                     }
                     
                     body>.content>.content__page1 .content__page1_caption::after,
