@@ -222,26 +222,24 @@ body{
             
                             } 
 
-                            .content__list_plus{
+             .content__list_plus{
                                
-                                    .content__list_style{ display: inline-block;
-                                        width: 5vw;
-                                        height: 5vw;
+                                    .content__list_style{ 
+                                        width: 8vmin;
+                                        height: 8vmin;
                                         position: relative;
                                         top: 3vw;
                                         right:-1vw;
                                         display:inline-block;
-                                        outline: 1px solid red;
+                                        // outline: 1px solid red;
                                         background-image: url('/img/sprite.png');
-                                        background-size: 200px 150px;
+                                        background-size: calc(8vmin * 3) calc(8vmin * 3);
                                         background-repeat: no-repeat;
-                                        background-position: -10vw -7vw;
+                                        background-position: calc(-8vmin * 2) calc(-8vmin * 2);
                                         
                                     }
+                                               
                                 
-                                
-                                
-                               
                                 
                                 input{
                                     display: none;                              
@@ -530,9 +528,7 @@ body{
             width: 8vw;
             height: 8vw;
             display: inline-block;
-        //    background-image: url('/img/sprite.png');
-        //    background-size: 10vw 10vw;
-        //    background-repeat: no-repeat;
+        
        }
     } 
     
@@ -542,14 +538,9 @@ body{
     //         margin-bottom: .5vw;
     //         }
 
-         
-
     //     main{          
     //         width: 100vw;
            
-            
-                        
-
     //             .content__page1_caption{
     //                 left: 5.3vw;
     //                 margin-left: 12vw;

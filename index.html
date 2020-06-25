@@ -380,8 +380,116 @@
 
                     body>.content .content__page3{
                         margin-left: 0.5vw;
+                        margin-right: 0.5vw;
+                        width: 95vw;
+                    }                   
+                        
+        }
+
+
+
+        @media screen and (min-width: 300px)and (max-width: 699px)
+            {
+               body>header{
+                margin-bottom: .5vw;
+
+                }
+
+                .content{
+                    font-size: 3vw;
+                }
+                .content__page1_caption{
+                        left: 5.3vw;
+                        margin-left: 12vw;
+                       
+                    }
+
+                .content__list_minus .content__page1_caption{
+                    left:-5vw;
+                }
+
+
+               
+                body>.content>.content__list .content__list_minus .content__page1_caption::after{
+                        content:"";
+                        display: inline-block;
+                        position: absolute;
+                        bottom:-3vw;
+                        right: -7vw;                           
+                        border-top: 2.5vw solid gold;
+                        border-bottom: 2.5vw solid gold;
+                        border-right: 5vw solid gold;
+                        border-left: 5vw solid gold;
+                        z-index: -10;
+                        border-right-color: transparent;                       
+                        box-shadow: -3vw 2px 25px 0 grey;
+                     }
+                     
+                      
+                    
+                        body>.footer{
+                        margin-left: .5vw;  
+                        margin-right: .5vw;
+                        margin-bottom: .5vw;
+                        }
+
+                        body>.content>.content__page1 .content__page1_history{
+                        margin-left: .5vw;
+                        margin-right: .5vw;
+                    
+                    
+                        }
+                    
+                        body>.content>.content__list{
+                            margin-left: 0.5vw;
                             margin-right: 0.5vw;
-                            width: 95vw;
+                            display: grid;
+                            justify-content: center;
+                            grid-template-columns: 1fr;
+                            grid-template-rows: 2fr;
+                            margin-left: 0;
+                            margin-right: 0; 
+
+                            font-size: 5vw;
+                        }
+
+                        .body>.content>.content__list .content__list_plus>.content__list_style{
+                            display: none;
+                        }
+
+                        body>.content>.content__list .content__list_plus,
+                        body>.content>.content__list  .content__list_minus{
+                        width: 98vw; 
+                        margin-top: 1vw;
+                        margin-bottom: 1vw;               
+                  
+                    }
+                    
+                    body>.content>.content__page1 .content__page1_caption::after,
+                    body>.content .content__page3 .content__page1_caption::after,
+                    body>.content>.content__list .content__list_plus>.content__page1_caption::after{
+                   
+                        content:"";
+                        display: inline-block;
+                        position: absolute;
+                        bottom:-3vw;
+                        left: -7vw;                           
+                        border-top: 2.5vw solid gold;
+                        border-bottom: 2.5vw solid gold;
+                        border-right: 5vw solid gold;
+                        border-left: 5vw solid gold;
+                        z-index: -10;
+                        border-left-color: transparent;                       
+                        box-shadow: 3vw -2px 25px 0 grey;
+                        
+                    }
+
+                    
+
+                    body>.content .content__page3{
+                        margin-left: 0.5vw;
+                        margin-right: 0.5vw;
+                        width: 95vw;
                     }
 
                    

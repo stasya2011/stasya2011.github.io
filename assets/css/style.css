@@ -217,18 +217,16 @@ body .content .content__list .content__page1_caption::before {
 }
 
 body .content .content__list .content__list_plus .content__list_style {
-  display: inline-block;
-  width: 5vw;
-  height: 5vw;
+  width: 8vmin;
+  height: 8vmin;
   position: relative;
   top: 3vw;
   right: -1vw;
   display: inline-block;
-  outline: 1px solid red;
   background-image: url("/img/sprite.png");
-  background-size: 200px 150px;
+  background-size: calc(8vmin * 3) calc(8vmin * 3);
   background-repeat: no-repeat;
-  background-position: -10vw -7vw;
+  background-position: calc(-8vmin * 2) calc(-8vmin * 2);
 }
 
 body .content .content__list .content__list_plus input {
