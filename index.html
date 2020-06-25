@@ -8,13 +8,16 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
     <style>
-       
         .header {
             /* width: calc(100vw - 1.5vw); */
             max-height: 100vh;
             position: relative;
             margin: 0 auto;
-         
+            width: 89.5vw;
+            box-shadow: 0 -.7vw 15px 2px rgb(27, 27, 26);
+            margin-bottom: 1vw;
+            overflow: hidden;
+
         }
 
         .header__header {
@@ -39,26 +42,31 @@
             font-size: 1.5em;
         }
 
+        .header__header_logo i {
+            font-size: .7em;
+            vertical-align: top;
+        }
+
         .header__header_menu {
             justify-self: end
         }
 
         .header__nav {
-            width: calc(100%);            
+            width: calc(100%);
 
         }
 
         .header>.header__nav>.header__nav_slid img {
-            width: 100%;
-            max-height: 90vh;
-            position: relative;
+            width: 89.5vw;
+            max-height: 100vh;
+            position: relative;     
            
         }
 
         .header__nav_slid {
-            display: none;           
+            display: none;
             position: relative;
-           
+
         }
 
         #slaiderRadio-1:checked~.header__nav_number-1,
@@ -74,21 +82,17 @@
         .header__nav_label::before {
             position: absolute;
             content: "";
-            border: 5vw solid rgba(230, 226, 12, 0.5);
+            border: 2vw solid rgba(230, 226, 12, 0.3);
             display: inline-block;
             border-top-color: transparent;
             border-bottom-color: transparent;
         }
 
-      
-       
 
         .prevSlide::before {
             border-left-color: transparent;
             left: 5vw;
             top: 40%;
-
-          
             animation-name: bottonLink;
             animation-delay: 2s;
             animation-duration: 1.2s;
@@ -97,9 +101,9 @@
             animation-iteration-count: infinite;
         }
 
-        .prevSlide:hover{
+        .prevSlide:hover {
             cursor: pointer;
-          
+
         }
 
         .nextSlide::before {
@@ -113,11 +117,12 @@
             animation-direction: alternate;
             animation-timing-function: ease-out;
             animation-iteration-count: infinite;
-           
+
         }
 
-        .nextSlide:hover{
-            
+        .nextSlide:hover {
+            cursor: pointer;
+
             animation-play-state: paused;
         }
 
@@ -130,11 +135,11 @@
             width: 6vh;
             height: 6vh;
             border: 2px solid rgba(80, 76, 76, 0.5);
-            box-shadow: 0 0 5pxrgba(80, 76, 76, 0.5) 1px black;
+            box-shadow: 0 0 5px rgba(80, 76, 76, 0.5) 1px black;
             border-radius: 50%;
             position: fixed;
             top: 1vh;
-            right: 5vw;
+            right: 7vw;
 
             animation-name: bottonLink;
             animation-delay: 2s;
@@ -145,7 +150,7 @@
 
         }
 
-        .header__header_menu>.header__header_linkCircle:hover{
+        .header__header_menu>.header__header_linkCircle:hover {
             animation-play-state: paused;
             cursor: pointer;
         }
@@ -158,7 +163,7 @@
             top: calc(50% - 0.25vh);
             left: calc(3vh / 2);
 
-           
+
 
         }
 
@@ -192,7 +197,8 @@
             color: rgb(36, 37, 26);
             z-index: 2;
             /* font-size: 1.8vw; */
-            width: 50vw;
+            width: 40vw;
+            text-align: center;
         }
 
 
@@ -201,12 +207,18 @@
             transition: all .5s ease-in-out .5s;
             padding: 1vw;
             padding-right: 3vw;
+            color: black;
+            font-weight: 800;
+            text-transform: uppercase;
+            font-family: 'Pacifico', cursive;
+            letter-spacing: .2vw;
 
         }
 
-        .header__header_menu>.header__header_linkCircle>div>ul a:hover{
-            color:orange;
-            
+        .header__header_menu>.header__header_linkCircle>div>ul a:hover {
+            color: black;
+            font-weight: 800;
+
         }
 
         .header__header_menu>.header__header_linkCircle>div>ul li {
@@ -215,11 +227,12 @@
             margin-top: 5%;
             list-style: none;
             transition: all .5s ease-in-out .5s;
-            
+
 
         }
-        .header__header_menu>.header__header_linkCircle>div>ul li:hover{
-            transform: translateX(-30px);            
+
+        .header__header_menu>.header__header_linkCircle>div>ul li:hover {
+            transform: translateX(-30px);
             box-shadow: .5vw 0 1vw .1vw rgb(15, 14, 14);
         }
 
@@ -275,16 +288,15 @@
 
         /*текст на картинке*/
 
-        .header__nav .header__nav_slid .header__nav_text
-               {
+        .header__nav .header__nav_slid .header__nav_text {
             position: absolute;
             bottom: 5vw;
-            margin-left: 2vw;            
+            margin-left: 5vw;
             font-family: ALEX BRUSH, Pattaya;
-          
+
         }
 
-       
+
         .header__nav .header__nav_slid .header__nav_text h2 a {
             text-decoration: none;
             color: red;
@@ -297,7 +309,7 @@
             top: 5vw;
             left: 20%;
             margin-left: 3vw;
-            margin-top:3vw;
+            margin-top: 3vw;
             width: 10vw;
             height: 5vw;
             vertical-align: middle;
@@ -307,7 +319,7 @@
 
             border-radius: 1vw;
             background-color: rgba(112, 158, 72, .5);
-        
+
 
         }
 
@@ -336,253 +348,289 @@
 
 
 
-    
-            @media screen and (min-width: 700px)and (max-width: 1000px)
-            {
-               body>header{
+
+        @media screen and (min-width: 700px)and (max-width: 1000px) {
+            body>header {
                 margin-bottom: .5vw;
-                }
+            }
 
-              
+            .header {                   
+            width: 99vw; 
+            margin: 0 auto;  
+            margin-left: .5vw;
+            margin-right: .5vw;          
+        }
 
-                .content__page1_caption{
-                        left: 5.3vw;
-                        margin-left: 12vw;
-                    }
+        .header>.header__nav>.header__nav_slid img {
+            width: 99vw;
+            max-height: 100vh;
+            position: relative;     
+           
+        }
 
-                .content__list_minus .content__page1_caption{
-                    left:-5vw;
-                }
+            .content__page1_caption {
+                left: 5.3vw;
+                margin-left: 12vw;
+            }
 
-               
-                body>.content>.content__list .content__list_minus .content__page1_caption::after{
-                        content:"";
-                        display: inline-block;
-                        position: absolute;
-                        bottom:-3vw;
-                        right: -7vw;                           
-                        border-top: 2.5vw solid gold;
-                        border-bottom: 2.5vw solid gold;
-                        border-right: 5vw solid gold;
-                        border-left: 5vw solid gold;
-                        z-index: -10;
-                        border-right-color: transparent;                       
-                        box-shadow: -3vw 2px 25px 0 grey;
-                     }
-                     
-                        .content__list{
-                        margin-left: 0;
-                        margin-right: 0; 
-                        }  
+            .content__list_minus .content__page1_caption {
+                left: -5vw;
+            }
 
-                      
-                    
-                        body>.footer{
-                        margin-left: .5vw;  
-                        margin-right: .5vw;
-                        margin-bottom: .5vw;
-                        }
 
-                        body>.content>.content__page1 .content__page1_history{
-                        margin-left: .5vw;
-                        margin-right: .5vw;
-                    
-                    
-                        }
-                    
-                        body>.content>.content__list{
-                            margin-left: 0.5vw;
-                            margin-right: 0.5vw;
-                        }
+            body>.content>.content__list .content__list_minus .content__page1_caption::after {
+                content: "";
+                display: inline-block;
+                position: absolute;
+                bottom: -3vw;
+                right: -7vw;
+                border-top: 2.5vw solid gold;
+                border-bottom: 2.5vw solid gold;
+                border-right: 5vw solid gold;
+                border-left: 5vw solid gold;
+                z-index: -10;
+                border-right-color: transparent;
+                box-shadow: -3vw 2px 25px 0 grey;
+            }
 
-                        body>.content>.content__list .content__list_plus,
-                        body>.content>.content__list  .content__list_minus{
-                    width: 45vw;                
-                  
-                    }
-                    
-                    body>.content>.content__page1 .content__page1_caption::after,
-                    body>.content .content__page3 .content__page1_caption::after,
-                    body>.content>.content__list .content__list_plus>.content__page1_caption::after{
-                   
-                        content:"";
-                        display: inline-block;
-                        position: absolute;
-                        bottom:-3vw;
-                        left: -7vw;                           
-                        border-top: 2.5vw solid gold;
-                        border-bottom: 2.5vw solid rgba(224, 194, 21, 0.589);
-                        border-right: 5vw solid gold;
-                        border-left: 5vw solid gold;
-                        z-index: -10;
-                        border-left-color: transparent;                       
-                        box-shadow: 3vw -2px 25px 0 grey;
-                        
-                    }
+            .content__list {
+                margin-left: 0;
+                margin-right: 0;
+            }
 
-                    body>.content .content__page3{
-                        margin-left: 0.5vw;
-                        margin-right: 0.5vw;
-                        width: 95vw;
-                    }                   
-                        
+
+
+            body>.footer {
+                margin-left: .5vw;
+                margin-right: .5vw;
+                margin-bottom: .5vw;
+            }
+
+            body>.content>.content__page1 .content__page1_history {
+                margin-left: .5vw;
+                margin-right: .5vw;
+
+
+            }
+
+            body>.content>.content__list {
+                margin-left: 0.5vw;
+                margin-right: 0.5vw;
+            }
+
+            body>.content>.content__list .content__list_plus,
+            body>.content>.content__list .content__list_minus {
+                width: 45vw;
+
+            }
+
+            body>.content>.content__page1 .content__page1_caption::after,
+            body>.content .content__page3 .content__page1_caption::after,
+            body>.content>.content__list .content__list_plus>.content__page1_caption::after {
+
+                content: "";
+                display: inline-block;
+                position: absolute;
+                bottom: -3vw;
+                left: -7vw;
+                border-top: 2.5vw solid gold;
+                border-bottom: 2.5vw solid rgba(224, 194, 21, 0.589);
+                border-right: 5vw solid gold;
+                border-left: 5vw solid gold;
+                z-index: -10;
+                border-left-color: transparent;
+                box-shadow: 3vw -2px 25px 0 grey;
+
+            }
+
+            body>.content .content__page3 {
+                margin-left: 0.5vw;
+                margin-right: 0.5vw;
+                width: 95vw;
+            }
+
         }
 
 
 
-        @media screen and (min-width: 300px)and (max-width: 699px)
-            {   
-               body>header{
+        @media screen and (min-width: 300px)and (max-width: 699px) {
+            body>header {
                 margin-bottom: .5vw;
 
-                }
+            }
 
-                *{
-                    font-size: 3.2vw;
-                }
+            .header {                   
+            width: 99vw; 
+            margin: 0 auto;  
+            margin-left: .5vw;
+            margin-right: .5vw;          
+        }
 
-                h1{
-                    font-size: 7vw;
-                }
+        .header>.header__nav>.header__nav_slid img {
+            width: 99vw;
+            max-height: 100vh;
+            position: relative;     
+           
+        }
 
-                .header__header_menu>.header__header_linkCircle>div>ul {
-                width: 55vw;
-               
+            * {
+                font-size: 3.2vw;
+            }
 
-                    
-                }
-
-                .header__header_menu>.header__header_linkCircle>div>ul li{
-                    font-size: 3.5vw;
-                    padding-top: .5vw;
-                    text-align: center;
-                    padding-bottom: .5vw;
-                    margin: 0;
-
-                    
-                }
-
-                .header__header_menu>.header__header_linkCircle>div>ul li:nth-last-child(1){
-                    margin-bottom: 2vw;
-                }
-
-                .content__figure .content__page1_caption{
-                    font-size: 2.0vw;
-                }
-                
+            h1 {
+                font-size: 7vw;
+            }
 
 
-                *.content__page1_caption{
-                        left: 5.3vw;
-                        margin-left: 12vw;
-                        font-size: 3vw;
-                       
-                    }
-                
-                       
-                .content__list_minus .content__page1_caption{
-                    left:-5vw;
-                }
 
-                .header__header_menu>.header__header_linkCircle>div>ul li:hover{
-            transform: translateX(-10px);            
-            box-shadow: .5vw 0 1vw .1vw rgb(15, 14, 14);
-        } 
-               
-                body>.content>.content__list .content__list_minus .content__page1_caption::after{
-                        content:"";
-                        display: inline-block;
-                        position: absolute;
-                        bottom:-3vw;
-                        right: -7vw;                           
-                        border-top: 2.5vw solid gold;
-                        border-bottom: 2.5vw solid gold;
-                        border-right: 5vw solid gold;
-                        border-left: 5vw solid gold;
-                        z-index: -10;
-                        border-right-color: transparent;                       
-                        box-shadow: -3vw 2px 25px 0 grey;
-                     }
-                     
-                      
-                    
-                        body>.footer{
-                        margin-left: .5vw;  
-                        margin-right: .5vw;
-                        margin-bottom: .5vw;
-                        }
+            .header__header_menu>.header__header_linkCircle>div>ul {
+                width: 50vw;
 
-                        body>.content>.content__page1 .content__page1_history{
-                        margin-left: .5vw;
-                        margin-right: .5vw;                    
-                    
-                        }
-                    
-                        body>.content>.content__list{
-                            margin-left: 0.5vw;
-                            margin-right: 0.5vw;
-                            display: grid;
-                            justify-content: center;
-                            grid-template-columns: 1fr;
-                            grid-template-rows: 2fr;
-                            margin-left: 0.5vw;
-                            margin-right: 0.5vw; 
+            }
 
-                            font-size: 5vw;
-                        }
+            .header__header_menu>.header__header_linkCircle>div>ul li {
+                font-size: 3.5vw;
+                padding-top: 0;
+                text-align: center;
+
+                margin: 0;
+                height: 8vw;
+                line-height: 8vw;
 
 
-                        body>.content>.content__list .content__list_plus,
-                        body>.content>.content__list  .content__list_minus{
-                        width: 94vw; 
-                        margin-top: 1vw;
-                        margin-bottom: 1vw;               
-                        margin-left: .5vw;
-                        margin-right: .5vw;
-                        padding-left:1vw;
-                        padding-right:1vw;
-                        }
+            }
 
-                    body>.content>.content__list .content__list_plus ol,
-                        body>.content>.content__list  .content__list_minus ol{
-                            padding-inline-start: 5vw;
-                        }
-                        
-                        .content__list .content__list_plus ol>.content__list_buttem{
-                            height: 5vw;
-                           padding-top: 1vw;
-                         padding-bottom: 1vw;
-                        }
-                    
-                    body>.content>.content__page1 .content__page1_caption::after,
-                    body>.content .content__page3 .content__page1_caption::after,
-                    body>.content>.content__list .content__list_plus>.content__page1_caption::after{
-                   
-                        content:"";
-                        display: inline-block;
-                        position: absolute;
-                        bottom:-3vw;
-                        left: -7vw;                           
-                        border-top: 2.5vw solid gold;
-                        border-bottom: 2.5vw solid gold;
-                        border-right: 5vw solid gold;
-                        border-left: 5vw solid gold;
-                        z-index: -10;
-                        border-left-color: transparent;                       
-                        box-shadow: 3vw -2px 25px 0 grey;
-                        
-                    }
+            .header__header_menu>.header__header_linkCircle>div>ul li a {
+                padding: .5vw;
+            }
 
-                    
+            .header__header_menu>.header__header_linkCircle>div>ul li:nth-last-child(1) {
+                margin-bottom: 2vw;
+            }
 
-                    body>.content .content__page3{
-                        margin-left: 0.5vw;
-                        margin-right: 0.5vw;
-                        width: 95vw;
-                    }
+            .content__figure .content__page1_caption {
+                font-size: 2.0vw;
+            }
 
-                   
-                        
+
+
+            *.content__page1_caption {
+                left: 5.3vw;
+                margin-left: 12vw;
+                font-size: 3vw;
+
+            }
+
+
+            .content__list_minus .content__page1_caption {
+                left: -5vw;
+            }
+
+            .header__header_menu>.header__header_linkCircle>div>ul li:hover {
+                transform: translateX(-10px);
+                box-shadow: .5vw 0 1vw .1vw rgb(15, 14, 14);
+            }
+
+            body>.content>.content__list .content__list_minus .content__page1_caption::after {
+                content: "";
+                display: inline-block;
+                position: absolute;
+                bottom: -3vw;
+                right: -7vw;
+                border-top: 2.5vw solid gold;
+                border-bottom: 2.5vw solid gold;
+                border-right: 5vw solid gold;
+                border-left: 5vw solid gold;
+                z-index: -10;
+                border-right-color: transparent;
+                box-shadow: -3vw 2px 25px 0 grey;
+            }
+
+            #active label {
+                width: 5vw;
+                height: 5vw;
+            }
+
+            body>.footer {
+                margin-left: .5vw;
+                margin-right: .5vw;
+                margin-bottom: .5vw;
+            }
+
+            body>.content>.content__page1 .content__page1_history {
+                margin-left: .5vw;
+                margin-right: .5vw;
+
+            }
+
+            body>.content>.content__list {
+                margin-left: 0.5vw;
+                margin-right: 0.5vw;
+                display: grid;
+                justify-content: center;
+                grid-template-columns: 1fr;
+                grid-template-rows: 2fr;
+                margin-left: 0.5vw;
+                margin-right: 0.5vw;
+
+                font-size: 5vw;
+            }
+
+
+            body>.content>.content__list .content__list_plus,
+            body>.content>.content__list .content__list_minus {
+                width: 97vw;
+                margin-top: 1vw;
+                margin-bottom: 1vw;
+                margin-left: .5vw;
+                margin-right: .5vw;
+                padding-left: 1vw;
+                padding-right: 1vw;
+            }
+
+            body>.content>.content__list .content__list_plus ol,
+            body>.content>.content__list .content__list_minus ol {
+                padding-inline-start: 5vw;
+            }
+
+            .content__list .content__list_plus ol>.content__list_buttem {
+                height: 5vw;
+                padding-top: 1vw;
+                padding-bottom: 1vw;
+            }
+
+            body>.content>.content__page1 .content__page1_caption::after,
+            body>.content .content__page3 .content__page1_caption::after,
+            body>.content>.content__list .content__list_plus>.content__page1_caption::after {
+
+                content: "";
+                display: inline-block;
+                position: absolute;
+                bottom: -3vw;
+                left: -7vw;
+                border-top: 2.5vw solid gold;
+                border-bottom: 2.5vw solid gold;
+                border-right: 5vw solid gold;
+                border-left: 5vw solid gold;
+                z-index: -10;
+                border-left-color: transparent;
+                box-shadow: 3vw -2px 25px 0 grey;
+
+            }
+
+
+
+            body>.content .content__page3 {
+                margin-left: 0.5vw;
+                margin-right: 0.5vw;
+                width: 95vw;
+            }
+
+            .body>.content>.content__list .content__list_minus ol li{
+                margin-bottom: 15vw;
+            }
+
+
         }
     </style>
 </head>
@@ -590,7 +638,7 @@
 <body>
     <header class="header">
         <div class="header__header" id="header">
-            <h1 class="header__header_logo">TRX</h1>
+            <h1 class="header__header_logo">TRX <i>&copy;</i></h1>
             <div class="header__header_menu">
                 <div class="header__header_linkCircle" href="#">
                     <div>
@@ -624,11 +672,11 @@
                 <label for="slaiderRadio-2" class="header__nav_label nextSlide"></label>
             </section>
             <section class="header__nav_slid header__nav_number-2">
-               
+
                 <img src="img/img4.jpg" alt="">
                 <div class='header__nav_text'>
-                <h2><a href="#plusTrx">Плюсы TRX</a> </h2>
-               
+                    <h2><a href="#plusTrx">Плюсы TRX</a> </h2>
+
                 </div>
                 <label for="slaiderRadio-1" class="header__nav_label prevSlide"></label>
                 <label for="slaiderRadio-3" class="header__nav_label nextSlide"></label>
@@ -636,26 +684,26 @@
             <section class="header__nav_slid header__nav_number-3">
                 <img src="img/5.jpg" alt="">
                 <div class='header__nav_text'>
-                <h2><a href="#minusTrx"> Минусы TRX </a></h2>
-                <!-- <div class="header__nav_buttonLink"><a href="#">MORE</a> -->
+                    <h2><a href="#minusTrx"> Минусы TRX </a></h2>
+                    <!-- <div class="header__nav_buttonLink"><a href="#">MORE</a> -->
                 </div>
                 <label for="slaiderRadio-2" class="header__nav_label prevSlide"></label>
                 <label for="slaiderRadio-4" class="header__nav_label nextSlide"></label>
             </section>
             <section class="header__nav_slid header__nav_number-4">
-                <img src="img/image22.jpg" alt="">
+                <img src="img/img_1.png" alt="">
                 <div class='header__nav_text'>
-                <h2> Минусы TRX</h2>
-                <!-- <div class="header__nav_buttonLink"><a href="#">MORE</a> -->
+                    <h2> Минусы TRX</h2>
+                    <!-- <div class="header__nav_buttonLink"><a href="#">MORE</a> -->
                 </div>
                 <label for="slaiderRadio-3" class="header__nav_label prevSlide"></label>
                 <label for="slaiderRadio-5" class="header__nav_label nextSlide"></label>
             </section>
             <section class="header__nav_slid header__nav_number-5">
-                <img src="img/5.jpg" alt="">
+                <img src="img/img_2.jpg" alt="">
                 <div class='header__nav_text'>
-                <h2><a href="#page3"> Базовые упражнения TRX </a></h2>
-                <!-- <div class="header__nav_buttonLink"><a href="#">MORE</a></div> -->
+                    <h2><a href="#page3"> Базовые упражнения TRX </a></h2>
+                    <!-- <div class="header__nav_buttonLink"><a href="#">MORE</a></div> -->
                 </div>
                 <label for="slaiderRadio-4" class="header__nav_label prevSlide"></label>
                 <label for="slaiderRadio-1" class="header__nav_label nextSlide"></label>
@@ -669,12 +717,12 @@
             <div class="content__page1_history">
                 <h3 class="content__page1_caption"> Что такое подвесной тренинг</h3>
                 <p>
-                    Подвесной тренинг — разновидность силового тренинга, при котором
+                    Подвесной тренинг &mdash; разновидность силового тренинга, при котором
                     используют подвесные системы из веревок или ремней, позволяющих выполнять упражнения,
                     используя в виде отягощения собственный вес человека.
                     <br>
 
-                    TRX (Total Body Resistance Exercise) – это аббревиатура.
+                    TRX (Total Body Resistance Exercise) &mdash; это аббревиатура.
                     Просто эти три буквы стали уже нарицательными и мы так называем все петли для подвесного тренинга.
                     Похожая история произошла с брендами Xerox, Jeep, Aspirin и др.
 
@@ -692,13 +740,13 @@
 
                         <label for="content__slide_input-4" class="content__figure_label prevSlide"></label>
                         <label for="content__slide_input-2" class="content__figure_label nextSlide"></label>
-                        <figcaption class="content__figure_caption">Рис.1866 г.«Athletic sports for
-                            boys»</figcaption>
+                        <figcaption class="content__figure_caption">&laquo;Athletic sports for
+                            boys&raquo;</figcaption>
 
                         <div class="content__figure_hidden">
                             Еще в XIX веке гимнасты и цирковые акробаты тренировались и выступали с подобными штуками.
-                            Этому есть документальные свидетельства. В 1886 году в Нью-Йорке была издана книга “Athletic
-                            sports for boys”,
+                            Этому есть документальные свидетельства. В 1886 году в Нью-Йорке была издана книга 1866 г &laquo;Athletic
+                            sports for boys &raquo;,
                             где они подробно описывались.
                         </div>
                     </figure>
@@ -750,7 +798,7 @@
                         <figcaption class="content__figure_caption">Рэнди Хетрик </figcaption>
                         <div class="content__figure_hidden">
                             Чуть позже Рэнди Хетрик ушел в отставку с военной службы и получая экономическое
-                            образование, параллельно доводил свое изобретение «до ума».
+                            образование, параллельно доводил свое изобретение &laquo;до ума&raquo;.
                             Дизайн и функционал его петли был изменен, по его признанию, не менее полсотни раз. В конце
                             концов, получилось то, что мы сейчас видим в каждом уважающем себя фитнес-клубе.
                         </div>
@@ -761,7 +809,7 @@
 
         </section>
 
-        <div class="content__list">            
+        <div class="content__list">
 
             <section class="content__list_plus" id="plusTrx">
                 <h3 class="content__page1_caption">Плюсы TRX</h3>
@@ -793,7 +841,7 @@
                         Например, для слабенького новичка подойдут отжимания стоя (руки с петлями и все тело чуть
                         вперед), имитирующие отжимания от стенки. Для тренированных уже предлагается сгибание-разгибание
                         рук, когда они упираются в пол, а голеностопы закреплены петлями. Нагрузка и сложность для
-                        продвинутых еще выше – отжиматься нужно «как обычно», но в упоре руками не в пол, а на рукоятки
+                        продвинутых еще выше &mdash; отжиматься нужно «как обычно», но в упоре руками не в пол, а на рукоятки
                         петель.
                     </div>
 
@@ -806,7 +854,7 @@
                     </div>
 
 
-                    
+
                     <li>Задействованны мышцы-стабилизаторы суставов, кора и околопозвоночные группы мышц</li>
                     <div class="content__list_style"></div>
                     <input type="checkbox" id="radioButton-5">
@@ -849,7 +897,7 @@
 
                     <li>Наличие свободного пространства — по 3-4 шага вперед и в сторону от вертикальной проекции точки
                         крепления на полу.</li>
-                        <!-- <div class="list__minus_img"><img src="/img/myPng-4.png" alt="Крепление потолочное для петель TRX"></div> -->
+                    <!-- <div class="list__minus_img"><img src="/img/myPng-4.png" alt="Крепление потолочное для петель TRX"></div> -->
 
                     <li> Возможность растяжения связок при неправильной технике выполнения сложных упражнений.</li>
 
@@ -874,83 +922,90 @@
 
         <section class="content__page3" id="page3">
             <h3 class="content__page1_caption">Базовые упражнения TRX</h3>
-                <div class="content__generalWrapper">
+            <div class="content__generalWrapper">
 
-                    <article id="sliderGeneral">
-                        <input checked type="radio" name="sliderPage3" id="switch1">
-                        <input type="radio" name="sliderPage3" id="switch2">
-                        <input type="radio" name="sliderPage3" id="switch3">
-                        <input type="radio" name="sliderPage3" id="switch4">
-                        <input type="radio" name="sliderPage3" id="switch5">
-                        <div id="slides">
-                            <div id="overflow">
-                                <div class="image">
-                                    <article> <iframe width="560" height="315"
-                                            src="https://www.youtube.com/embed/Gagl23KZs0U" frameborder="0"
-                                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                            allowfullscreen> </iframe></article>
-                                    <article><iframe width="560" height="315"
-                                            src="https://www.youtube.com/embed/UQGIV4QzIdU" frameborder="0"
-                                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                            allowfullscreen></iframe></article>
-                                    <article><iframe width="560" height="315"
-                                            src="https://www.youtube.com/embed/-3PjU3l7qnA" frameborder="0"
-                                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                            allowfullscreen></iframe></article>
-                                    <article><iframe width="560" height="315"
-                                            src="https://www.youtube.com/embed/xJpH14sML-M" frameborder="0"
-                                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                            allowfullscreen></iframe></article>
-                                    <article><iframe width="560" height="315"
-                                            src="https://www.youtube.com/embed/M-Y1SHmUdeI" frameborder="0"
-                                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                            allowfullscreen></iframe></article>
-                                </div>
+                <article id="sliderGeneral">
+                    <input checked type="radio" name="sliderPage3" id="switch1">
+                    <input type="radio" name="sliderPage3" id="switch2">
+                    <input type="radio" name="sliderPage3" id="switch3">
+                    <input type="radio" name="sliderPage3" id="switch4">
+                    <input type="radio" name="sliderPage3" id="switch5">
+                    <div id="slides">
+                        <div id="overflow">
+                            <div class="image">
+                                <article> <iframe width="560" height="315"
+                                        src="https://www.youtube.com/embed/Gagl23KZs0U" frameborder="0"
+                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen> </iframe></article>
+                                <article><iframe width="560" height="315"
+                                        src="https://www.youtube.com/embed/UQGIV4QzIdU" frameborder="0"
+                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe></article>
+                                <article><iframe width="560" height="315"
+                                        src="https://www.youtube.com/embed/-3PjU3l7qnA" frameborder="0"
+                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe></article>
+                                <article><iframe width="560" height="315"
+                                        src="https://www.youtube.com/embed/xJpH14sML-M" frameborder="0"
+                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe></article>
+                                <article><iframe width="560" height="315"
+                                        src="https://www.youtube.com/embed/M-Y1SHmUdeI" frameborder="0"
+                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe></article>
                             </div>
                         </div>
-                        <div id="controls">
-                            <label for="switch1"></label>
-                            <label for="switch2"></label>
-                            <label for="switch3"></label>
-                            <label for="switch4"></label>
-                            <label for="switch5"></label>
-                        </div>
-                        <div id="active">
-                            <label for="switch1"></label>
-                            <label for="switch2"></label>
-                            <label for="switch3"></label>
-                            <label for="switch4"></label>
-                            <label for="switch5"></label>
-                        </div>
-                    <!-- </article>
-        <div class="content__page3__background">
+                    </div>
+                    <div id="controls">
+                        <label for="switch1"></label>
+                        <label for="switch2"></label>
+                        <label for="switch3"></label>
+                        <label for="switch4"></label>
+                        <label for="switch5"></label>
+                    </div>
+                    <div id="active">
+                        <label for="switch1"></label>
+                        <label for="switch2"></label>
+                        <label for="switch3"></label>
+                        <label for="switch4"></label>
+                        <label for="switch5"></label>
+                    </div>
 
-        </div>   -->
-        <div>
-            <form action="">
-                <input type="text" name="userName">
-                <input type="text" name="userAge">
-                <button>кнопка</button>
-            </form>
+                <div class="content__page3_slider">
 
-            <div id="output"></div>
-        </div>
-                   
+                    <div class="content__page3_img content__page3_img">
+                        <img src="/img/page3_1.jpg" alt="">
+                    </div>
+
+                    <div class="content__page3_img content__page3_img">
+                        <img src="/img/page3_2.jpg" alt="">
+                    </div>
+
+                    <div class="content__page3_img content__page3_img">
+                        <img src="/img/page3_3.jpg" alt="">
+                    </div>
+
+                    <div class="content__page3_img content__page3_img">
+                        <img src="img/page3_4.jpg" alt="">
+                    </div>
+
+
+           
+                </div>
+
         </section>
     </main>
 
     <footer class="footer">
         <div class="footer__items footer__items-1"></div>
-        <div class="footer__items footer__items-2"></div>    
+        <div class="footer__items footer__items-2"></div>
         <div class="footer__items footer__items-3"></div>
         <div class="footer__items footer__items-4"></div>
-     
+
     </footer>
 
 
-    <script>
 
-    </script>
 
 </body>
 
