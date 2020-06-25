@@ -192,13 +192,15 @@
             color: rgb(36, 37, 26);
             z-index: 2;
             /* font-size: 1.8vw; */
-            width: 25vw;
+            width: 50vw;
         }
 
 
         .header__header_menu>.header__header_linkCircle>div>ul a {
             text-decoration: none;
             transition: all .5s ease-in-out .5s;
+            padding: 1vw;
+            padding-right: 3vw;
 
         }
 
@@ -208,9 +210,8 @@
         }
 
         .header__header_menu>.header__header_linkCircle>div>ul li {
-            width: 100%;
+            /* width: 100%; */
             height: 10vh;
-            margin-left: -5%;
             margin-top: 5%;
             list-style: none;
             transition: all .5s ease-in-out .5s;
@@ -218,7 +219,7 @@
 
         }
         .header__header_menu>.header__header_linkCircle>div>ul li:hover{
-            transform: translateX(50px);            
+            transform: translateX(-30px);            
             box-shadow: .5vw 0 1vw .1vw rgb(15, 14, 14);
         }
 
@@ -248,6 +249,7 @@
             position: absolute;
             top: -0.4vh;
             right: -3vw;
+            padding-inline-start: 5vw;
 
         }
 
@@ -287,6 +289,8 @@
         .header__nav .header__nav_slid .header__nav_text h2 a {
             text-decoration: none;
             color: red;
+            font-size: 4vw;
+            font-weight: 400;
         }
 
         .header__nav .header__nav_slid .header__nav_text>.header__nav_buttonLink {
@@ -371,6 +375,8 @@
                         margin-left: 0;
                         margin-right: 0; 
                         }  
+
+                      
                     
                         body>.footer{
                         margin-left: .5vw;  
@@ -427,21 +433,20 @@
 
         @media screen and (min-width: 300px)and (max-width: 699px)
             {   
-
-               
                body>header{
                 margin-bottom: .5vw;
 
                 }
 
                 *{
-                    font-size: 3.5vw;
+                    font-size: 3.2vw;
                 }
 
-            h1{
-                font-size: 10vw;
-            }
-                .content__page1_caption{
+                h1{
+                    font-size: 7vw;
+                }
+
+                .content__figure .content__page1_caption{
                     font-size: 2.0vw;
                 }
                 
@@ -458,7 +463,10 @@
                     left:-5vw;
                 }
 
-
+                .header__header_menu>.header__header_linkCircle>div>ul li:hover{
+            transform: translateX(-10px);            
+            box-shadow: .5vw 0 1vw .1vw rgb(15, 14, 14);
+        } 
                
                 body>.content>.content__list .content__list_minus .content__page1_caption::after{
                         content:"";
@@ -502,9 +510,6 @@
                             font-size: 5vw;
                         }
 
-                        .body>.content>.content__list .content__list_plus>.content__list_style{
-                            display: none;
-                        }
 
                         body>.content>.content__list .content__list_plus,
                         body>.content>.content__list  .content__list_minus{
@@ -514,14 +519,19 @@
                         margin-left: .5vw;
                         margin-right: .5vw;
                         padding-left:1vw;
-                    padding-right:1vw;
-                    }
+                        padding-right:1vw;
+                        }
 
                     body>.content>.content__list .content__list_plus ol,
                         body>.content>.content__list  .content__list_minus ol{
-                            padding-inline-start: 1vw;
+                            padding-inline-start: 5vw;
                         }
-               
+                        
+                        .content__list .content__list_plus ol>.content__list_buttem{
+                            height: 5vw;
+                           padding-top: 1vw;
+                         padding-bottom: 1vw;
+                        }
                     
                     body>.content>.content__page1 .content__page1_caption::after,
                     body>.content .content__page3 .content__page1_caption::after,
@@ -565,9 +575,9 @@
                     <div>
                         <ul>
                             <li> <a class="header__header_linkPage" href="#main_content">Что такое TRX </a> </li>
-                            <li> <a class="header__header_linkPage" href="#">Плюсы/минусы TRX</a> </li>
-                            <li> <a class="header__header_linkPage" href="#page3"> Базовые упражнения TRX </a> </li>
-                            <li> <a class="header__header_linkPage" href="#">Особенности trx</a> </li>
+                            <li> <a class="header__header_linkPage" href="#">Плюсы TRX</a> </li>
+                            <li> <a class="header__header_linkPage" href="#page3"> Минусы TRX </a> </li>
+                            <li> <a class="header__header_linkPage" href="#">Базовые упражнения TRX</a> </li>
                         </ul>
                     </div>
                 </div>
@@ -584,7 +594,7 @@
             <section class="header__nav_slid header__nav_number-1">
                 <img src="img/3.jpg" alt="">
                 <div class='header__nav_text'>
-                    <h2> <a href="#main_content">Что такое TRX</a> </h2>
+                    <h2> <a href="#main_content">Что такое подвесной тренинг</a> </h2>
                     <!-- <div class="header__nav_buttonLink"><a href="#main_content">MORE</a>
                     </div> -->
                 </div>
@@ -595,7 +605,7 @@
                
                 <img src="img/img4.jpg" alt="">
                 <div class='header__nav_text'>
-                <h2><a href="#">Что такое TRX</a> </h2>
+                <h2><a href="#">Плюсы TRX</a> </h2>
                
                 </div>
                 <label for="slaiderRadio-1" class="header__nav_label prevSlide"></label>
@@ -604,7 +614,7 @@
             <section class="header__nav_slid header__nav_number-3">
                 <img src="img/5.jpg" alt="">
                 <div class='header__nav_text'>
-                <h2><a href="#"> Плюсы/минусы TRX </a></h2>
+                <h2><a href="#"> Минусы TRX </a></h2>
                 <!-- <div class="header__nav_buttonLink"><a href="#">MORE</a> -->
                 </div>
                 <label for="slaiderRadio-2" class="header__nav_label prevSlide"></label>
@@ -613,7 +623,7 @@
             <section class="header__nav_slid header__nav_number-4">
                 <img src="img/image22.jpg" alt="">
                 <div class='header__nav_text'>
-                <h2> Что такое подвесной тренинг</h2>
+                <h2> Минусы TRX</h2>
                 <!-- <div class="header__nav_buttonLink"><a href="#">MORE</a> -->
                 </div>
                 <label for="slaiderRadio-3" class="header__nav_label prevSlide"></label>
@@ -622,8 +632,8 @@
             <section class="header__nav_slid header__nav_number-5">
                 <img src="img/5.jpg" alt="">
                 <div class='header__nav_text'>
-                <h2><a href="#"> Что такое TRX </a></h2>
-                <div class="header__nav_buttonLink"><a href="#">MORE</a></div>
+                <h2><a href="#"> Базовые упражнения TRX </a></h2>
+                <!-- <div class="header__nav_buttonLink"><a href="#">MORE</a></div> -->
                 </div>
                 <label for="slaiderRadio-4" class="header__nav_label prevSlide"></label>
                 <label for="slaiderRadio-1" class="header__nav_label nextSlide"></label>
@@ -660,7 +670,7 @@
 
                         <label for="content__slide_input-4" class="content__figure_label prevSlide"></label>
                         <label for="content__slide_input-2" class="content__figure_label nextSlide"></label>
-                        <figcaption class="content__figure_caption">Иллюстрация из книги 1866 г.<br>«Athletic sports for
+                        <figcaption class="content__figure_caption">Рис.1866 г.«Athletic sports for
                             boys»</figcaption>
 
                         <div class="content__figure_hidden">
@@ -683,7 +693,7 @@
                             Древнем Риме и Китае, которые уже тогда славились своими превосходными спортивными
                             качествами.
                             Акробаты из Древнего Китая были известны на весь мир как искусные гимнасты.<br>
-                            В 19 веке в воинских подразделениях разных стран начинают разрабатываться методики
+                            В XIX в., в воинских подразделениях разных стран начинают разрабатываться методики
                             упражнений с веревками
                             для подготовки к тяжелым боям и условиям горных экспедиций. Подобные «подвесные» тренировки
                             встречаются и
@@ -715,7 +725,7 @@
                         <img src="img/content_4.jpg " alt="">
                         <label for="content__slide_input-3" class="content__figure_label prevSlide"> </label>
                         <label for="content__slide_input-1" class="content__figure_label nextSlide"></label>
-                        <figcaption class="content__figure_caption"> </figcaption>
+                        <figcaption class="content__figure_caption">Рэнди Хетрик </figcaption>
                         <div class="content__figure_hidden">
                             Чуть позже Рэнди Хетрик ушел в отставку с военной службы и получая экономическое
                             образование, параллельно доводил свое изобретение «до ума».

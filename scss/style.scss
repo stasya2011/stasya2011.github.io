@@ -4,7 +4,7 @@ $windowHeight: 90vh;
 $widthGeneral:calc(100vw - 1.5vw);
 $marginCenter: 0 auto;
 $contentWidthImg: 20vw;
-$contentBackgroundShedow: .2vw .5vw .5vw .1vw rgba(255, 255, 255, .5), .4vw .7vw 7px 10px rgba(76, 72, 72, .4);
+$contentBackgroundShedow: .2vw .5vw 1vw .1vw rgba(32, 28, 28, 0.5), .4vw .7vw 1vw .1vw rgba(76, 72, 72, .4);
 $marginLeftRight: 5vw;
 $spaceBackgroundColor: rgba(184, 162, 38, .4);
 $mainBoxShadow: 0 -.5vw 15px 1px  rgb(27, 27, 26);
@@ -27,6 +27,7 @@ body{
     margin: 0 auto;
     font-family: sans-serif;
     background-color: rgb(233, 229, 195);
+    font-size: 1.8vw;
   
  
     .content {
@@ -57,7 +58,7 @@ body{
             
                 .content__page1_caption{
                 // width: 40vw;
-                font-size: 1.2rem;
+               
                 padding-left: 2vw;
                 padding-right: 2vw;
                 height: 5vw;
@@ -182,12 +183,21 @@ body{
 
             }
 
+            
+
             .content__list {
                 margin-top: 2vw;
                 display: flex;
                 justify-content: space-between;
                 margin-left: $marginLeftRight;
                 margin-right: $marginLeftRight;
+
+
+                .content__list_plus .content__page1_caption,
+                .content__list_minus .content__page1_caption{
+                    padding-left:2vw;
+                    padding-right:5vw;
+                }
             
                 .content__list_plus,
                 .content__list_minus{
@@ -195,19 +205,21 @@ body{
                     background-color: $spaceBackgroundColor;
                     box-shadow: $mainBoxShadow;
                     position: relative;
-                    padding-left:1vw;
-                    padding-right:1vw;
+                    padding-left:2vw;
+                    padding-right:2vw;
+
+                    
 
                     .content__page1_caption{
                         // width: 20vw;
-                        padding-left:2vw;
-                        padding-right:2vw;
+                      
                         height: $heightCaption;
                         background-color: gold;
                         display: inline-block;
                         position: relative;
                         margin-bottom: 4vw;
-                        top: 2vw;             
+                        top: 2vw;
+                                     
                         line-height: 5vw;
                         vertical-align: middle;
                         text-transform:uppercase;
@@ -258,6 +270,7 @@ body{
                                    
                                     padding-left: 2vw;
                                     padding-right: 2vw;
+                                  
                                     height: 4vw;
                                     display: inline-block;
                                     
@@ -387,8 +400,8 @@ body{
                     box-shadow: $mainBoxShadow;
 
                     .content__page1_caption{
-                        // padding-right: 2vw;
-                        // padding-left: 2vw;
+                        padding-right: 5vw;
+                        padding-left: 2vw;
                         height: 5vw;
                         background-color: gold;
                         display: inline-block;
@@ -511,6 +524,11 @@ body{
                     
                     #controls label:hover{ /*прозрачность стрелок при наведении*/
                         opacity: 0.6;
+                    }
+
+                    input{
+                        display: none;                              
+
                     }
                     
                     #controls label{ /*прозрачность стрелок при отводе курсора*/
