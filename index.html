@@ -428,28 +428,32 @@
         @media screen and (min-width: 300px)and (max-width: 699px)
             {   
 
-                body *{
-                    font-size: 2vw;
-                }
+               
                body>header{
                 margin-bottom: .5vw;
 
                 }
 
-                .content,
-             
-                .content__page1_history{
-                    font-size: 3vw;
+                *{
+                    font-size: 3.5vw;
                 }
+
+            h1{
+                font-size: 10vw;
+            }
                 .content__page1_caption{
+                    font-size: 2.0vw;
+                }
+                
+
+                *.content__page1_caption{
                         left: 5.3vw;
                         margin-left: 12vw;
+                        font-size: 3vw;
                        
                     }
                 
-                    .content__list .content__list_hidden{
-                        font-size: 10vw;
-                    }    
+                       
                 .content__list_minus .content__page1_caption{
                     left:-5vw;
                 }
@@ -509,7 +513,15 @@
                         margin-bottom: 1vw;               
                         margin-left: .5vw;
                         margin-right: .5vw;
+                        padding-left:1vw;
+                    padding-right:1vw;
                     }
+
+                    body>.content>.content__list .content__list_plus ol,
+                        body>.content>.content__list  .content__list_minus ol{
+                            padding-inline-start: 1vw;
+                        }
+               
                     
                     body>.content>.content__page1 .content__page1_caption::after,
                     body>.content .content__page3 .content__page1_caption::after,

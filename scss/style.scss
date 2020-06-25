@@ -23,7 +23,7 @@ $heightCaption: 5vw;
 }
 
 body{
-    font-size: 1.5rem;
+    // font-size: 1.5rem;
     margin: 0 auto;
     font-family: sans-serif;
     background-color: rgb(233, 229, 195);
@@ -37,7 +37,7 @@ body{
         margin: $marginCenter;
         position: relative; 
         font-family: 'Pacifico', cursive;
-        // 
+        
         
 
         .content__page1 {           
@@ -57,6 +57,7 @@ body{
             
                 .content__page1_caption{
                 // width: 40vw;
+                font-size: 1.2rem;
                 padding-left: 2vw;
                 padding-right: 2vw;
                 height: 5vw;
@@ -78,7 +79,7 @@ body{
                     position: absolute;
                     bottom:-3vw;
                     left:0;                           
-                    border: 1.5vw solid rgb(255, 168, 7);
+                    border: 1.5vw solid rgba(255, 168, 7, .5);
                     border-left-color: transparent;
                     border-bottom-color: transparent;
                     
@@ -104,26 +105,27 @@ body{
                         margin-bottom: 5vw;
                     
 
-                        .content__figure_label::after{
+                        .content__figure_label::before{
                             position: absolute; 
+                            
                             content: "";
-                            border: 15px solid rgba(230, 226, 12, 1);
+                            border: 3vw solid rgba(230, 226, 12, .4);
                             display: inline-block;
                             border-top-color: transparent;
                             border-bottom-color: transparent;
-                            bottom: 3vw;  
+                            top: 5vw;  
                         
                         }
 
-                        .prevSlide::after{   
+                        .prevSlide::before{   
                             border-left-color: transparent;     
-                            left:0;    
+                            left:-2vw;    
                             
                         }
                 
-                        .nextSlide::after{   
+                        .nextSlide::before{   
                             border-right-color: transparent;                      
-                            right:0;
+                            right:-2vw;
                         }            
                     
 
@@ -141,7 +143,7 @@ body{
                         }
 
                         .content__figure_caption {
-                            font-size: 1vw;
+                            // font-size: 1vw;
                             font-weight: 700;
                             margin-top: 4vw;
                         
@@ -193,10 +195,8 @@ body{
                     background-color: $spaceBackgroundColor;
                     box-shadow: $mainBoxShadow;
                     position: relative;
-                    padding-left:2vw;
-                    padding-right:2vw;
-
-                }
+                    padding-left:1vw;
+                    padding-right:1vw;
 
                     .content__page1_caption{
                         // width: 20vw;
@@ -227,6 +227,10 @@ body{
             
                             } 
 
+
+                }
+
+                   
                                 .content__list_plus{
                                
                                     .content__list_style{ 
@@ -287,7 +291,7 @@ body{
                                 .content__list_hidden{
                                     padding: 2vw;
                                     width: 80%;
-                                    font-size: 1.5vw;
+                                    // font-size: 1.5vw;
                                     position:relative;
                                     margin: 0 auto;
                                     box-shadow:0 2px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;                             
