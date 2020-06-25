@@ -74,7 +74,7 @@
         .header__nav_label::before {
             position: absolute;
             content: "";
-            border: 20px solid rgba(230, 226, 12, 0.5);
+            border: 5vw solid rgba(230, 226, 12, 0.5);
             display: inline-block;
             border-top-color: transparent;
             border-bottom-color: transparent;
@@ -279,7 +279,6 @@
                {
             position: absolute;
             bottom: 5vw;
-            /* font-size: 2em; */
             margin-left: 2vw;            
             font-family: ALEX BRUSH, Pattaya;
           
@@ -412,7 +411,7 @@
                         bottom:-3vw;
                         left: -7vw;                           
                         border-top: 2.5vw solid gold;
-                        border-bottom: 2.5vw solid gold;
+                        border-bottom: 2.5vw solid rgba(224, 194, 21, 0.589);
                         border-right: 5vw solid gold;
                         border-left: 5vw solid gold;
                         z-index: -10;
@@ -568,16 +567,17 @@
 
 <body>
     <header class="header">
-        <div class="header__header">
+        <div class="header__header" id="header">
             <h1 class="header__header_logo">TRX</h1>
             <div class="header__header_menu">
                 <div class="header__header_linkCircle" href="#">
                     <div>
                         <ul>
+                            <li> <a class="header__header_linkPage" href="#header">Главная </a> </li>
                             <li> <a class="header__header_linkPage" href="#main_content">Что такое TRX </a> </li>
-                            <li> <a class="header__header_linkPage" href="#">Плюсы TRX</a> </li>
-                            <li> <a class="header__header_linkPage" href="#page3"> Минусы TRX </a> </li>
-                            <li> <a class="header__header_linkPage" href="#">Базовые упражнения TRX</a> </li>
+                            <li> <a class="header__header_linkPage" href="#plusTrx">Плюсы TRX</a> </li>
+                            <li> <a class="header__header_linkPage" href="#minusTrx"> Минусы TRX </a> </li>
+                            <li> <a class="header__header_linkPage" href="#page3">Базовые упражнения TRX</a> </li>
                         </ul>
                     </div>
                 </div>
@@ -605,7 +605,7 @@
                
                 <img src="img/img4.jpg" alt="">
                 <div class='header__nav_text'>
-                <h2><a href="#">Плюсы TRX</a> </h2>
+                <h2><a href="#plusTrx">Плюсы TRX</a> </h2>
                
                 </div>
                 <label for="slaiderRadio-1" class="header__nav_label prevSlide"></label>
@@ -614,7 +614,7 @@
             <section class="header__nav_slid header__nav_number-3">
                 <img src="img/5.jpg" alt="">
                 <div class='header__nav_text'>
-                <h2><a href="#"> Минусы TRX </a></h2>
+                <h2><a href="#minusTrx"> Минусы TRX </a></h2>
                 <!-- <div class="header__nav_buttonLink"><a href="#">MORE</a> -->
                 </div>
                 <label for="slaiderRadio-2" class="header__nav_label prevSlide"></label>
@@ -632,7 +632,7 @@
             <section class="header__nav_slid header__nav_number-5">
                 <img src="img/5.jpg" alt="">
                 <div class='header__nav_text'>
-                <h2><a href="#"> Базовые упражнения TRX </a></h2>
+                <h2><a href="#page3"> Базовые упражнения TRX </a></h2>
                 <!-- <div class="header__nav_buttonLink"><a href="#">MORE</a></div> -->
                 </div>
                 <label for="slaiderRadio-4" class="header__nav_label prevSlide"></label>
@@ -741,7 +741,7 @@
 
         <div class="content__list">            
 
-            <section class="content__list_plus">
+            <section class="content__list_plus" id="plusTrx">
                 <h3 class="content__page1_caption">Плюсы TRX</h3>
                 <ol>
                     <li class="list__items">Петли TRX могут заменить тренажерный зал. </li>
@@ -806,7 +806,6 @@
                         благодаря выполнению упражнений с измененными углами движений и уменьшению нагрузки на суставы.
                     </div>
 
-
                     <li> Несомненная польза для всего организма</li>
                     <div class="content__list_style"></div>
                     <input type="checkbox" id="radioButton-7">
@@ -819,19 +818,32 @@
                 </ol>
             </section>
 
-            <section class="content__list_minus">
+            <section class="content__list_minus" id="minusTrx">
 
                 <h3 class=" content__page1_caption">Минусы TRX</h3>
                 <ol>
                     <li>Дополнительные расходы на установку стационарного крепежа в стену (лучше в потолок).</li>
+                    <!-- <div class="list__minus_img"><img src="/img/myPng-3.png" alt="Крепление потолочное для петель TRX"></div> -->
 
                     <li>Наличие свободного пространства — по 3-4 шага вперед и в сторону от вертикальной проекции точки
                         крепления на полу.</li>
+                        <!-- <div class="list__minus_img"><img src="/img/myPng-4.png" alt="Крепление потолочное для петель TRX"></div> -->
 
                     <li> Возможность растяжения связок при неправильной технике выполнения сложных упражнений.</li>
 
                     <li>Травмирование при падениях, возможных, если были куплены петли с дешевыми соединяющими
                         крепежами.</li>
+
+                    <li>
+                        Невозможность накачать существенно мышцы.
+                    </li>
+
+                    <li>
+                        Невозможность накачать существенно мышцы.
+                    </li>
+                    <li>
+                        Повышенная нагрузка на костно-связочный аппарат
+                    </li>
 
                 </ol>
             </section>
@@ -889,13 +901,19 @@
                             <label for="switch5"></label>
                         </div>
                     </article>
+        <div class="content__page3__background">
+
+        </div>          
+                   
         </section>
     </main>
 
     <footer class="footer">
-        <div class="footer__items">
-            
-        </div>
+        <div class="footer__items footer__items-1"></div>
+        <div class="footer__items footer__items-2"></div>    
+        <div class="footer__items footer__items-3"></div>
+        <div class="footer__items footer__items-4"></div>
+     
     </footer>
 
 </body>
