@@ -55,9 +55,12 @@ body{
                 margin-left: $marginLeftRight;
                 margin-right: $marginLeftRight;
                 background-color: $spaceBackgroundColor;
+                p{
+                    text-indent: 2vw;
+                }
             
                 .content__page1_caption{
-                // width: 40vw;
+                  
                
                 padding-left: 2vw;
                 padding-right: 2vw;
@@ -586,13 +589,13 @@ body{
         }
         
     .footer{
-        padding-right: 5vw;
+        
         display: flex;
        
         max-height: 10vh;
         // width: 100%;
         margin-left: 5vw;  
-        margin-right: 5vw;
+        margin-right: 5.5vw;
         margin-bottom: .5vw;    
         background-image: linear-gradient(to left, rgb(169, 173, 100), rgb(163, 168, 92), rgb(157, 164, 85),
         rgb(10, 10, 7), rgb(144, 155, 70), rgb(138, 150, 62), rgb(134, 151, 64), rgb(129, 153, 65),
@@ -614,7 +617,9 @@ body{
             background-repeat: no-repeat;
             background-position: calc(-8vmin * 3) 0;
             
-
+            &:nth-of-type(1){
+                margin-left: 4vw;
+            }
             
            &:hover{
                 cursor: pointer;

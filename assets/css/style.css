@@ -45,6 +45,10 @@ body .content .content__page1 .content__page1_history {
   background-color: rgba(184, 162, 38, 0.4);
 }
 
+body .content .content__page1 .content__page1_history p {
+  text-indent: 2vw;
+}
+
 body .content .content__page1 .content__page1_history .content__page1_caption {
   padding-left: 2vw;
   padding-right: 2vw;
@@ -569,13 +573,12 @@ body .content .content__page3 #controls label {
 }
 
 body .footer {
-  padding-right: 5vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   max-height: 10vh;
   margin-left: 5vw;
-  margin-right: 5vw;
+  margin-right: 5.5vw;
   margin-bottom: .5vw;
   background-image: -webkit-gradient(linear, right top, left top, from(#a9ad64), color-stop(#a3a85c), color-stop(#9da455), color-stop(#0a0a07), color-stop(#909b46), color-stop(#8a963e), color-stop(#869740), color-stop(#819941), color-stop(#7d9a43), color-stop(#799b45), color-stop(#749d46), to(#709e48));
   background-image: linear-gradient(to left, #a9ad64, #a3a85c, #9da455, #0a0a07, #909b46, #8a963e, #869740, #819941, #7d9a43, #799b45, #749d46, #709e48);
@@ -591,6 +594,10 @@ body .footer .footer__items {
   background-size: calc(8vmin * 5) calc(8vmin * 2);
   background-repeat: no-repeat;
   background-position: calc(-8vmin * 3) 0;
+}
+
+body .footer .footer__items:nth-of-type(1) {
+  margin-left: 4vw;
 }
 
 body .footer .footer__items:hover {
