@@ -643,6 +643,8 @@ body .footer {
   display: -ms-flexbox;
   display: flex;
   max-height: 10vh;
+  vertical-align: middle;
+  line-height: 10vh;
   margin-left: 5vw;
   margin-right: 5.5vw;
   margin-bottom: .5vw;
@@ -724,7 +726,7 @@ body .footer .footer__items-2 {
 }
 
 body .footer .footer__items-3 {
-  background-position: calc(-8vmin * 4) calc(-8vmin * 1);
+  background-position: calc(-8vmin * 4) calc(-8.5vmin * 1);
 }
 
 body .footer .footer__items-4 {
