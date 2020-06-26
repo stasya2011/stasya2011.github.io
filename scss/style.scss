@@ -680,8 +680,8 @@ body {
         display: flex;
         
         max-height: 10vh;
-        vertical-align: middle;
-        line-height: 10vh;
+       
+        // line-height: 10vh;
 
         // width: 100%;
         margin-left: 5vw;
@@ -696,7 +696,8 @@ body {
             0 -5px 10px 2px rgb(34, 32, 32);
 
         .footer__items {
-            margin: .5vw;
+            margin-left: .5vw;
+            margin-top: .5vw;
             width: 8vmin;
             height: 8vmin;
 

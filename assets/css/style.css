@@ -643,8 +643,6 @@ body .footer {
   display: -ms-flexbox;
   display: flex;
   max-height: 10vh;
-  vertical-align: middle;
-  line-height: 10vh;
   margin-left: 5vw;
   margin-right: 5.5vw;
   margin-bottom: .5vw;
@@ -655,7 +653,8 @@ body .footer {
 }
 
 body .footer .footer__items {
-  margin: .5vw;
+  margin-left: .5vw;
+  margin-top: .5vw;
   width: 8vmin;
   height: 8vmin;
   background-image: url("/img/myPng-2_.png");
